@@ -50,6 +50,11 @@ public class Player : MonoBehaviour {
 				movementSpeed = regularSpeed;
 				firstPersonCamera.transform.Translate(0, 0.3F, 0);
 			}
+
+			// Quit Game
+			if (Input.GetKeyUp(KeyCode.Escape)) {
+				Application.Quit();
+			}
 		}
 		
 		// Rotation
