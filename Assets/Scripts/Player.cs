@@ -17,6 +17,8 @@ public class Player : MonoBehaviour {
 	private const float gravity = 9.81F;
 	private const float mouseSensitivity = 1.0F;
 	private float verticalRotation = 0.0F;
+
+	private GameObject objectHeld;
 	
 	void Start() {
 		controller = GetComponent<CharacterController>();
@@ -57,6 +59,20 @@ public class Player : MonoBehaviour {
 				}
 				crouchToggle = !crouchToggle;
 			}
+		}
+
+		if (Input.GetKeyDown(KeyCode.E)) {
+			RaycastHit hit;
+			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
+				objectHeld = hit.collider.gameObject;
+				objectHeld.GetComponent<Rigidbody>().isKinematic = true;
+			}
+		} else if (Input.GetKeyUp(KeyCode.E)) {
+			objectHeld.GetComponent<Rigidbody>().isKinematic = false;
+			objectHeld = null;
+		}
+		if (objectHeld != null) {
+			objectHeld.transform.position = transform.position + transform.forward;
 		}
 		
 		// Rotation
