@@ -12,7 +12,7 @@ public class Player : MonoBehaviour {
 	private const float regularSpeed = 2.0F;
 	private const float sprintSpeed = 4.0F;
 	private const float jumpSpeed = 4.0F;
-	private const float crouchSpeed = 0.50F;
+	private const float crouchSpeed = 1.0F;
 	private const float gravity = 9.81F;
 	private const float mouseSensitivity = 1.0F;
 	private float verticalRotation = 0.0F;
