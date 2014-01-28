@@ -20,9 +20,6 @@ public class Player : MonoBehaviour {
 	void Start() {
 		controller = GetComponent<CharacterController>();
 		firstPersonCamera = transform.Find("FirstPersonCamera");
-		if (!Application.isEditor) {
-			Screen.showCursor = false;
-		}
 	}
 	
 	void Update() {
@@ -49,11 +46,6 @@ public class Player : MonoBehaviour {
 			} else if (Input.GetKeyUp(KeyCode.LeftControl)) {
 				movementSpeed = regularSpeed;
 				firstPersonCamera.transform.Translate(0, 0.3F, 0);
-			}
-
-			// Quit Game
-			if (Input.GetKeyUp(KeyCode.Escape)) {
-				Application.Quit();
 			}
 		}
 		
