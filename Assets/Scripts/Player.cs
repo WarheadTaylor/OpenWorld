@@ -70,9 +70,8 @@ public class Player : MonoBehaviour {
 		} else if (Input.GetKeyUp(KeyCode.E)) {
 			objectHeld.GetComponent<Rigidbody>().isKinematic = false;
 			objectHeld = null;
-		}
-		if (objectHeld != null) {
-			objectHeld.transform.position = transform.position + transform.forward;
+		} else if (objectHeld != null) {
+			objectHeld.transform.position = Vector3.MoveTowards(objectHeld.transform.position, transform.position + transform.forward, 7.0F * Time.deltaTime);
 		}
 		
 		// Rotation
