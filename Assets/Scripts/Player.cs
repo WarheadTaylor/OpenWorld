@@ -13,6 +13,7 @@ public class Player : MonoBehaviour {
 	private const float sprintSpeed = 4.0F;
 	private const float jumpSpeed = 4.0F;
 	private const float crouchSpeed = 1.0F;
+	private bool crouchToggle = false;
 	private const float gravity = 9.81F;
 	private const float mouseSensitivity = 1.0F;
 	private float verticalRotation = 0.0F;
@@ -40,12 +41,21 @@ public class Player : MonoBehaviour {
 			}
 			
 			// Control crouching
-			if (Input.GetKeyDown(KeyCode.LeftControl)) {
+			if (Input.GetKeyDown(KeyCode.LeftControl) && crouchToggle == false) {
 				movementSpeed = crouchSpeed;
 				firstPersonCamera.transform.Translate(0, -0.3F, 0);
-			} else if (Input.GetKeyUp(KeyCode.LeftControl)) {
+			} else if (Input.GetKeyUp(KeyCode.LeftControl) && crouchToggle == false) {
 				movementSpeed = regularSpeed;
 				firstPersonCamera.transform.Translate(0, 0.3F, 0);
+			} else if (Input.GetKeyDown(KeyCode.C)) {
+				if (crouchToggle == true) {
+					movementSpeed = regularSpeed;
+					firstPersonCamera.transform.Translate(0, 0.3F, 0);
+				} else {
+					movementSpeed = crouchSpeed;
+					firstPersonCamera.transform.Translate(0, -0.3F, 0);
+				}
+				crouchToggle = !crouchToggle;
 			}
 		}
 		
