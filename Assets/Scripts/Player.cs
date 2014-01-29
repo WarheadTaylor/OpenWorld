@@ -9,7 +9,7 @@ public class Player : MonoBehaviour {
 	private Vector3 moveDirection;
 	
 	private float movementSpeed = 3.0F;
-	private const float regularSpeed = 2.0F;
+	private const float regularSpeed = 3.0F;
 	private const float sprintSpeed = 4.0F;
 	private const float jumpSpeed = 4.0F;
 	private const float crouchSpeed = 1.0F;
@@ -61,14 +61,19 @@ public class Player : MonoBehaviour {
 			}
 		}
 
+		// Ability to pickup GameObject's
 		if (Input.GetKeyDown(KeyCode.E)) {
 			RaycastHit hit;
 			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
 				objectHeld = hit.collider.gameObject;
-				objectHeld.GetComponent<Rigidbody>().isKinematic = true;
+				if (objectHeld.GetComponent<Rigidbody>()) {
+					objectHeld.GetComponent<Rigidbody>().isKinematic = true;
+				}
 			}
-		} else if (Input.GetKeyUp(KeyCode.E)) {
-			objectHeld.GetComponent<Rigidbody>().isKinematic = false;
+		} else if (Input.GetKeyUp(KeyCode.E) && objectHeld) {
+			if (objectHeld.GetComponent<Rigidbody>()) {
+				objectHeld.GetComponent<Rigidbody>().isKinematic = false;
+			}
 			objectHeld = null;
 		} else if (objectHeld != null) {
 			objectHeld.transform.position = Vector3.MoveTowards(objectHeld.transform.position, transform.position + transform.forward, 7.0F * Time.deltaTime);
