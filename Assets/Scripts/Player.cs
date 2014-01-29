@@ -15,7 +15,7 @@ public class Player : MonoBehaviour {
 	private const float crouchSpeed = 1.0F;
 	private bool crouchToggle = false;
 	private const float gravity = 9.81F;
-	private const float mouseSensitivity = 1.0F;
+	private const float mouseSensitivity = 1.5F;
 	private float verticalRotation = 0.0F;
 
 	void Start() {
@@ -63,7 +63,7 @@ public class Player : MonoBehaviour {
 		// Rotation
 		transform.Rotate(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0);
 		verticalRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-		verticalRotation = Mathf.Clamp(verticalRotation, -60.0F, 60.0F);
+		verticalRotation = Mathf.Clamp(verticalRotation, -80.0F, 80.0F);
 		firstPersonCamera.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 		
 		moveDirection.y -= gravity * Time.deltaTime;

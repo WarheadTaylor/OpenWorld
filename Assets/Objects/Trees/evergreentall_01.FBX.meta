@@ -75,7 +75,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: .0350000001
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
@@ -89,7 +89,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
   tangentSpace:
     normalSmoothAngle: 0
-    splitTangentsAcrossUV: 1
+    splitTangentsAcrossUV: 0
     normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1

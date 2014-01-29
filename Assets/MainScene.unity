@@ -3419,9 +3419,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 329711232}
   - 95: {fileID: 329711236}
+  - 54: {fileID: 329711233}
   - 65: {fileID: 329711235}
   - 136: {fileID: 329711234}
-  - 54: {fileID: 329711233}
   m_Layer: 0
   m_Name: axetool
   m_TagString: Untagged
@@ -7713,9 +7713,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 883348787}
   - 95: {fileID: 883348786}
+  - 54: {fileID: 883348783}
   - 65: {fileID: 883348785}
   - 136: {fileID: 883348784}
-  - 54: {fileID: 883348783}
   m_Layer: 0
   m_Name: axetool
   m_TagString: Untagged
@@ -11713,9 +11713,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 1451672978}
   - 95: {fileID: 1451672977}
-  - 54: {fileID: 1451672976}
+  - 65: {fileID: 1875728700}
   - 136: {fileID: 1451672975}
-  - 65: {fileID: 1451672974}
+  - 54: {fileID: 1875728699}
   m_Layer: 0
   m_Name: axebroken
   m_TagString: Untagged
@@ -11723,19 +11723,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1451672974
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6500002, guid: 9ecb298d2ea685a43869761058711322,
-    type: 2}
-  m_PrefabInternal: {fileID: 275423623}
-  m_GameObject: {fileID: 1451672973}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: .550000012, y: .25, z: .100000001}
-  m_Center: {x: 0, y: 1.02999997, z: 0}
 --- !u!136 &1451672975
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -11750,22 +11737,6 @@ CapsuleCollider:
   m_Height: .800000012
   m_Direction: 1
   m_Center: {x: 0, y: .5, z: 0}
---- !u!54 &1451672976
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5400002, guid: 9ecb298d2ea685a43869761058711322,
-    type: 2}
-  m_PrefabInternal: {fileID: 275423623}
-  m_GameObject: {fileID: 1451672973}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: .0500000007
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 2
 --- !u!95 &1451672977
 Animator:
   serializedVersion: 2
@@ -13591,6 +13562,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1724171798}
+  - 114: {fileID: 1724171799}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -13611,6 +13583,17 @@ Transform:
   - {fileID: 1429006116}
   - {fileID: 801277653}
   m_Father: {fileID: 0}
+--- !u!114 &1724171799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1724171797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c40709ab643908a47acb6987787ff142, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1727230243
 GameObject:
   m_ObjectHideFlags: 0
@@ -14810,9 +14793,6 @@ GameObject:
   - 4: {fileID: 1875728698}
   - 33: {fileID: 1875728703}
   - 23: {fileID: 1875728702}
-  - 136: {fileID: 1875728701}
-  - 65: {fileID: 1875728700}
-  - 54: {fileID: 1875728699}
   m_Layer: 0
   m_Name: Cylinder001
   m_TagString: Untagged
@@ -14837,7 +14817,7 @@ Rigidbody:
   m_PrefabParentObject: {fileID: 5400000, guid: 9ecb298d2ea685a43869761058711322,
     type: 2}
   m_PrefabInternal: {fileID: 275423623}
-  m_GameObject: {fileID: 1875728697}
+  m_GameObject: {fileID: 1451672973}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -14853,27 +14833,13 @@ BoxCollider:
   m_PrefabParentObject: {fileID: 6500000, guid: 9ecb298d2ea685a43869761058711322,
     type: 2}
   m_PrefabInternal: {fileID: 275423623}
-  m_GameObject: {fileID: 1875728697}
+  m_GameObject: {fileID: 1451672973}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: .5, y: .129999995, z: .230000004}
-  m_Center: {x: 0, y: 0, z: 1.04999995}
---- !u!136 &1875728701
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 13600000, guid: 9ecb298d2ea685a43869761058711322,
-    type: 2}
-  m_PrefabInternal: {fileID: 275423623}
-  m_GameObject: {fileID: 1875728697}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: .0799999982
-  m_Height: 1
-  m_Direction: 2
-  m_Center: {x: -.000545594899, y: -.00367112784, z: .500000119}
+  m_Size: {x: .550000012, y: .25, z: .100000001}
+  m_Center: {x: 0, y: 1.02999997, z: 0}
 --- !u!23 &1875728702
 Renderer:
   m_ObjectHideFlags: 0
