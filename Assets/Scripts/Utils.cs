@@ -16,6 +16,4 @@ public class Utils : MonoBehaviour {
 			Application.Quit();
 		}
 	}
-	
-
 }
