@@ -29,7 +29,7 @@ public class Player : MonoBehaviour {
 			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * movementSpeed;
 			moveDirection = transform.rotation * moveDirection;
 			
-			if (Input.GetButton("Jump")) {
+			if (Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpSpeed;
 			}
 			
