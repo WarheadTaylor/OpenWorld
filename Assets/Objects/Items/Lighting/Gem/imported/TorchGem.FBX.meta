@@ -22,6 +22,7 @@ ModelImporter:
     4300000: Cylinder001
     4300002: Cylinder002
     4300004: LightGem
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -55,9 +56,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 0
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

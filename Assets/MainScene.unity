@@ -2633,68 +2633,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 874424588}
   m_GameObject: {fileID: 243553203}
   m_Mesh: {fileID: 4300002, guid: d7c5052093f0201498414071938ed39b, type: 3}
---- !u!1 &248831932
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 248831934}
-  - 108: {fileID: 248831933}
-  m_Layer: 0
-  m_Name: Point light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &248831933
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 248831932}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 2
-  m_Color: {r: .970588207, g: .768103421, b: .107050158, a: 1}
-  m_Intensity: 1.62
-  m_Range: 7.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &248831934
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 248831932}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.2288275, y: 1.96168375, z: 11.4049206}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &249145591
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,6 +4882,7 @@ GameObject:
   - 23: {fileID: 544337233}
   - 95: {fileID: 544337232}
   - 108: {fileID: 544337231}
+  - 114: {fileID: 544337235}
   m_Layer: 0
   m_Name: TorchGem
   m_TagString: Untagged
@@ -5043,6 +4982,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1994097905}
   m_GameObject: {fileID: 544337229}
   m_Mesh: {fileID: 4300004, guid: 9c354f694e831954a8e584760240f95d, type: 3}
+--- !u!114 &544337235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: dcedd4c5ab94b9946ae51c18d10df6b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1994097905}
+  m_GameObject: {fileID: 544337229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660c4cc4cf21b834e99745767eebf667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &547017201
 GameObject:
   m_ObjectHideFlags: 0
@@ -8778,8 +8729,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 1
-  m_Color: {r: .551470578, g: .551470578, b: .551470578, a: 1}
-  m_Intensity: .400000006
+  m_Color: {r: .928559482, g: 1, b: .301470578, a: 1}
+  m_Intensity: .300000012
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -12971,6 +12922,7 @@ GameObject:
   - 23: {fileID: 1521119336}
   - 95: {fileID: 1521119335}
   - 108: {fileID: 1521119334}
+  - 114: {fileID: 1521119339}
   m_Layer: 0
   m_Name: TorchGem
   m_TagString: Untagged
@@ -13070,6 +13022,18 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1972957104}
+--- !u!114 &1521119339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: dcedd4c5ab94b9946ae51c18d10df6b1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1034686623}
+  m_GameObject: {fileID: 1521119333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660c4cc4cf21b834e99745767eebf667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1538930093
 GameObject:
   m_ObjectHideFlags: 0
@@ -17551,66 +17515,4 @@ Transform:
   - {fileID: 1347796522}
   - {fileID: 1100901318}
   - {fileID: 272717685}
-  m_Father: {fileID: 0}
---- !u!1 &2145502466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 2145502468}
-  - 108: {fileID: 2145502467}
-  m_Layer: 0
-  m_Name: Point light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &2145502467
-Light:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2145502466}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Type: 2
-  m_Color: {r: .970588207, g: .768103421, b: .107050158, a: 1}
-  m_Intensity: 1.62
-  m_Range: 7.5
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_Strength: 1
-    m_Bias: .0500000007
-    m_Softness: 4
-    m_SoftnessFade: 1
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_ActuallyLightmapped: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 1
-  m_ShadowSamples: 1
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
-  m_IndirectIntensity: 1
-  m_AreaSize: {x: 1, y: 1}
---- !u!4 &2145502468
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2145502466}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.3644333, y: 2.91614485, z: 17.5356522}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
   m_Father: {fileID: 0}
