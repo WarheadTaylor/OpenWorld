@@ -65,8 +65,8 @@ public class Player : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.E)) {
 			RaycastHit hit;
 			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
-				objectHeld = hit.collider.gameObject;
-				if (objectHeld.GetComponent<Rigidbody>()) {
+				if (hit.transform.gameObject.GetComponent<Rigidbody>()) {
+					objectHeld = hit.collider.gameObject;
 					objectHeld.GetComponent<Rigidbody>().isKinematic = true;
 				}
 			}
