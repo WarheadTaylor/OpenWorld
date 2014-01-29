@@ -8358,7 +8358,11 @@ Light:
   serializedVersion: 3
   m_Type: 1
   m_Color: {r: .551470578, g: .551470578, b: .551470578, a: 1}
+<<<<<<< .merge_file_a03104
   m_Intensity: .200000003
+=======
+  m_Intensity: .400000006
+>>>>>>> .merge_file_a05728
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
