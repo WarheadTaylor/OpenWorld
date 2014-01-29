@@ -2,12 +2,10 @@
 using System.Collections;
 
 public class Pickup : MonoBehaviour {
-	private CharacterController controller;
 	private Transform firstPersonCamera;
 	private GameObject objectHeld;
 
 	void Start () {
-		controller = GetComponent<CharacterController>();
 		firstPersonCamera = transform.Find("FirstPersonCamera");
 	}
 
