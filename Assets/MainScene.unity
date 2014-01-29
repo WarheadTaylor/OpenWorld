@@ -2783,6 +2783,7 @@ GameObject:
   - 136: {fileID: 254972968}
   - 23: {fileID: 254972967}
   - 114: {fileID: 254972971}
+  - 114: {fileID: 254972973}
   - 143: {fileID: 254972972}
   m_Layer: 0
   m_Name: Player
@@ -2869,6 +2870,17 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &254972973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 254972966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 072e6e9d88700c547b8863d89572e21a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &257738845
 GameObject:
   m_ObjectHideFlags: 0

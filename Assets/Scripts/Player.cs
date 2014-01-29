@@ -18,8 +18,6 @@ public class Player : MonoBehaviour {
 	private const float mouseSensitivity = 1.0F;
 	private float verticalRotation = 0.0F;
 
-	private GameObject objectHeld;
-	
 	void Start() {
 		controller = GetComponent<CharacterController>();
 		firstPersonCamera = transform.Find("FirstPersonCamera");
@@ -59,24 +57,6 @@ public class Player : MonoBehaviour {
 				}
 				crouchToggle = !crouchToggle;
 			}
-		}
-
-		// Ability to pickup GameObject's
-		if (Input.GetKeyDown(KeyCode.E)) {
-			RaycastHit hit;
-			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
-				if (hit.transform.gameObject.GetComponent<Rigidbody>()) {
-					objectHeld = hit.collider.gameObject;
-					objectHeld.GetComponent<Rigidbody>().isKinematic = true;
-				}
-			}
-		} else if (Input.GetKeyUp(KeyCode.E) && objectHeld) {
-			if (objectHeld.GetComponent<Rigidbody>()) {
-				objectHeld.GetComponent<Rigidbody>().isKinematic = false;
-			}
-			objectHeld = null;
-		} else if (objectHeld != null) {
-			objectHeld.transform.position = Vector3.MoveTowards(objectHeld.transform.position, transform.position + transform.forward, 7.0F * Time.deltaTime);
 		}
 		
 		// Rotation
