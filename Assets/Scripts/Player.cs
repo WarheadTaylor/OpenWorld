@@ -10,8 +10,8 @@ public class Player : MonoBehaviour {
 	
 	private float movementSpeed = 3.0F;
 	private const float regularSpeed = 3.0F;
-	private const float sprintSpeed = 4.0F;
-	private const float jumpSpeed = 4.0F;
+	private const float sprintSpeed = 5.0F;
+	private const float jumpSpeed = 3.0F;
 	private const float crouchSpeed = 1.0F;
 	private bool crouchToggle = false;
 	private const float gravity = 9.81F;
@@ -21,42 +21,43 @@ public class Player : MonoBehaviour {
 	void Start() {
 		controller = GetComponent<CharacterController>();
 		firstPersonCamera = transform.Find("FirstPersonCamera");
+		moveDirection = new Vector3(0, 0, 0);
 	}
 	
 	void Update() {
-		// Movement
+		moveDirection.x = Input.GetAxis("Horizontal");
+		moveDirection.z = Input.GetAxis("Vertical");
+		moveDirection = transform.rotation * moveDirection;
+
 		if (controller.isGrounded) {
-			moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical")) * movementSpeed;
-			moveDirection = transform.rotation * moveDirection;
-			
 			if (Input.GetButtonDown("Jump")) {
 				moveDirection.y = jumpSpeed;
 			}
-			
-			// Control sprinting
-			if (Input.GetKeyDown(KeyCode.LeftShift)) {
-				movementSpeed = sprintSpeed;
-			} else if (Input.GetKeyUp(KeyCode.LeftShift)) {
-				movementSpeed = regularSpeed;
-			}
-			
-			// Control crouching
-			if (Input.GetKeyDown(KeyCode.LeftControl) && crouchToggle == false) {
-				movementSpeed = crouchSpeed;
-				firstPersonCamera.transform.Translate(0, -0.3F, 0);
-			} else if (Input.GetKeyUp(KeyCode.LeftControl) && crouchToggle == false) {
+		}
+		
+		// Control sprinting
+		if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0.0F) {
+			movementSpeed = sprintSpeed;
+		} else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+			movementSpeed = regularSpeed;
+		}
+		
+		// Control crouching
+		if (Input.GetKeyDown(KeyCode.LeftControl) && crouchToggle == false) {
+			movementSpeed = crouchSpeed;
+			firstPersonCamera.transform.Translate(0, -0.3F, 0);
+		} else if (Input.GetKeyUp(KeyCode.LeftControl) && crouchToggle == false) {
+			movementSpeed = regularSpeed;
+			firstPersonCamera.transform.Translate(0, 0.3F, 0);
+		} else if (Input.GetKeyDown(KeyCode.C)) {
+			if (crouchToggle == true) {
 				movementSpeed = regularSpeed;
 				firstPersonCamera.transform.Translate(0, 0.3F, 0);
-			} else if (Input.GetKeyDown(KeyCode.C)) {
-				if (crouchToggle == true) {
-					movementSpeed = regularSpeed;
-					firstPersonCamera.transform.Translate(0, 0.3F, 0);
-				} else {
-					movementSpeed = crouchSpeed;
-					firstPersonCamera.transform.Translate(0, -0.3F, 0);
-				}
-				crouchToggle = !crouchToggle;
+			} else {
+				movementSpeed = crouchSpeed;
+				firstPersonCamera.transform.Translate(0, -0.3F, 0);
 			}
+			crouchToggle = !crouchToggle;
 		}
 		
 		// Rotation
@@ -66,7 +67,7 @@ public class Player : MonoBehaviour {
 		firstPersonCamera.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 		
 		moveDirection.y -= gravity * Time.deltaTime;
-		controller.Move(moveDirection * Time.deltaTime);
+		controller.Move(moveDirection * movementSpeed * Time.deltaTime);
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
