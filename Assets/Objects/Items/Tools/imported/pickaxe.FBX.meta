@@ -1,28 +1,20 @@
 fileFormatVersion: 2
-guid: d806fff2936c9aa4cb4d095119d90f3e
+guid: 71347d74e175c8c47b2835ffa8fa2fb9
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Box001
-    100004: Cylinder001
-    100006: Cylinder002
-    400000: //RootNode
-    400002: Box001
-    400004: Cylinder001
-    400006: Cylinder002
+    100000: Box001
+    100002: Cylinder001
+    100004: //RootNode
+    400000: Box001
+    400002: Cylinder001
+    400004: //RootNode
     2300000: Box001
     2300002: Cylinder001
-    2300004: Cylinder002
     3300000: Box001
     3300002: Cylinder001
-    3300004: Cylinder002
     4300000: Cylinder001
     4300002: Box001
-    4300004: Cylinder002
-    6400000: Box001
-    6400002: Cylinder001
-    6400004: Cylinder002
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -44,7 +36,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: .00999999978
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
@@ -56,8 +48,8 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 0
-    splitTangentsAcrossUV: 1
+    normalSmoothAngle: 10
+    splitTangentsAcrossUV: 0
     normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
@@ -74,6 +66,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   additionalBone: 0
   userData: 
