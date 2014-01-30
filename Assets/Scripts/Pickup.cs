@@ -20,7 +20,6 @@ public class Pickup : MonoBehaviour {
 						objectHeld.GetComponent<Rigidbody>().isKinematic = true;
 					}
 				}
-
 			} else {
 				if (objectHeld.GetComponent<Rigidbody>()) {
 					objectHeld.GetComponent<Rigidbody>().isKinematic = false;
@@ -30,6 +29,9 @@ public class Pickup : MonoBehaviour {
 		}
 		if (objectHeld) {
 			objectHeld.transform.position = Vector3.MoveTowards(objectHeld.transform.position, transform.position + transform.forward, 7.0F * Time.deltaTime);
+			if (Input.GetKeyDown(KeyCode.Mouse2)) {
+				objectHeld.transform.eulerAngles = new Vector3(0, 90, 0);
+			}
 		}
 	}
 }
