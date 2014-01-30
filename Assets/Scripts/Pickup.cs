@@ -12,19 +12,23 @@ public class Pickup : MonoBehaviour {
 	void Update () {
 		// Ability to pickup GameObject's
 		if (Input.GetKeyDown(KeyCode.E)) {
-			RaycastHit hit;
-			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
-				if (hit.transform.gameObject.GetComponent<Rigidbody>()) {
-					objectHeld = hit.collider.gameObject;
-					objectHeld.GetComponent<Rigidbody>().isKinematic = true;
+			if (!objectHeld) {
+				RaycastHit hit;
+				if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
+					if (hit.transform.gameObject.GetComponent<Rigidbody>()) {
+						objectHeld = hit.collider.gameObject;
+						objectHeld.GetComponent<Rigidbody>().isKinematic = true;
+					}
 				}
+
+			} else {
+				if (objectHeld.GetComponent<Rigidbody>()) {
+					objectHeld.GetComponent<Rigidbody>().isKinematic = false;
+				}
+				objectHeld = null;
 			}
-		} else if (Input.GetKeyUp(KeyCode.E) && objectHeld) {
-			if (objectHeld.GetComponent<Rigidbody>()) {
-				objectHeld.GetComponent<Rigidbody>().isKinematic = false;
-			}
-			objectHeld = null;
-		} else if (objectHeld != null) {
+		}
+		if (objectHeld) {
 			objectHeld.transform.position = Vector3.MoveTowards(objectHeld.transform.position, transform.position + transform.forward, 7.0F * Time.deltaTime);
 		}
 	}
