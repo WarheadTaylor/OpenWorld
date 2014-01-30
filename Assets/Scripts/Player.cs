@@ -38,7 +38,7 @@ public class Player : MonoBehaviour {
 		// Control sprinting
 		if (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") > 0.0F) {
 			movementSpeed = sprintSpeed;
-		} else if (Input.GetKeyUp(KeyCode.LeftShift)) {
+		} else if (Input.GetKeyUp(KeyCode.LeftShift) || (Input.GetKey(KeyCode.LeftShift) && Input.GetAxis("Vertical") < 0.2F)) {
 			movementSpeed = regularSpeed;
 		}
 		
