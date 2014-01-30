@@ -2,13 +2,13 @@
 using System.Collections;
 
 public class WebPlayer : MonoBehaviour {
-
-	void Start () {
 	
+	void Start () {
+		
 	}
-
+	
 	void Update () {
-
+		
 		if (Application.isWebPlayer) {
 			// Lock mouse to window.
 			Screen.lockCursor = true;
