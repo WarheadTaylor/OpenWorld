@@ -2498,6 +2498,8 @@ GameObject:
   - 136: {fileID: 412713915}
   - 65: {fileID: 412713914}
   - 54: {fileID: 412713913}
+  - 114: {fileID: 412713920}
+  - 111: {fileID: 412713921}
   m_Layer: 0
   m_Name: pickaxe
   m_TagString: Untagged
@@ -2605,6 +2607,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &412713920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412713912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f4c57afbd2adc04ba0cae65bb631d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!111 &412713921
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 412713912}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400002, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
+  m_Animations:
+  - {fileID: 7400002, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &414412458
 GameObject:
   m_ObjectHideFlags: 0
