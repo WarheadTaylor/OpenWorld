@@ -25,8 +25,8 @@ public class Player : MonoBehaviour {
 	}
 	
 	void Update() {
-		moveDirection.x = Input.GetAxis("Horizontal");
-		moveDirection.z = Input.GetAxis("Vertical");
+		moveDirection.x = Input.GetAxis("Horizontal") * movementSpeed;
+		moveDirection.z = Input.GetAxis("Vertical") * movementSpeed;
 		moveDirection = transform.rotation * moveDirection;
 
 		if (controller.isGrounded) {
@@ -67,7 +67,7 @@ public class Player : MonoBehaviour {
 		firstPersonCamera.localRotation = Quaternion.Euler(verticalRotation, 0, 0);
 		
 		moveDirection.y -= gravity * Time.deltaTime;
-		controller.Move(moveDirection * movementSpeed * Time.deltaTime);
+		controller.Move(moveDirection * Time.deltaTime);
 	}
 
 	void OnControllerColliderHit(ControllerColliderHit hit) {
