@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Webplayer : MonoBehaviour {
+public class WebPlayer : MonoBehaviour {
 
 	void Start () {
 	
@@ -9,11 +9,13 @@ public class Webplayer : MonoBehaviour {
 
 	void Update () {
 
-		// Lock mouse to window.
-		Screen.lockCursor = true;
-
-		if (Application.CanStreamedLevelBeLoaded(1)) {
-			Application.LoadLevel(1);
+		if (Application.isWebPlayer) {
+			// Lock mouse to window.
+			Screen.lockCursor = true;
+			
+			if (Application.CanStreamedLevelBeLoaded(1)) {
+				Application.LoadLevel(1);
+			}
 		}
 	}
 }
