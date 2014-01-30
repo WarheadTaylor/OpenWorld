@@ -10,9 +10,6 @@ public class WebPlayer : MonoBehaviour {
 	void Update () {
 		
 		if (Application.isWebPlayer) {
-			// Lock mouse to window.
-			Screen.lockCursor = true;
-			
 			if (Application.CanStreamedLevelBeLoaded(1)) {
 				Application.LoadLevel(1);
 			}

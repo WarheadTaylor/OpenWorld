@@ -15,5 +15,7 @@ public class Utils : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Escape)) {
 			Application.Quit();
 		}
+		// Lock mouse to window.
+		Screen.lockCursor = true;
 	}
 }
