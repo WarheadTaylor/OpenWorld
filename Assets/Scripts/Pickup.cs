@@ -20,7 +20,9 @@ public class Pickup : MonoBehaviour {
 			RaycastHit hit;
 			if (Physics.Raycast(firstPersonCamera.position, firstPersonCamera.forward, out hit, 2)) {
 				item = hit.transform.gameObject;
-				inventoryScript.addToInventory(item.name);
+				if (inventoryScript.addToInventory(item.name)) {
+					DestroyObject(item);
+				}
 			}
 		}
 	}
