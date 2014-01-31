@@ -3,14 +3,16 @@ using System.Collections;
 using SimpleJSON;
 
 public class Inventory : MonoBehaviour {
-	private bool inventoryOpen = false;
 	private int[] inventoryItems;
+	private bool inventoryOpen = false;
 
-	private JSONNode listOfItems;
+	private JSONNode itemsKey;
+	private JSONNode itemsValue;
 
 	void Start () {
-		inventoryItems = new int[8];
-		listOfItems = JSON.Parse(Resources.Load<TextAsset>("items").text);
+		inventoryItems = new int[9];
+		itemsKey = JSON.Parse(Resources.Load<TextAsset>("TextAssets/itemsKey").text);
+		itemsValue = JSON.Parse(Resources.Load<TextAsset>("TextAssets/itemsValue").text);
 
 		for (int i = 0; i < inventoryItems.Length; i++) {
 			inventoryItems[i] = -1;
@@ -21,28 +23,6 @@ public class Inventory : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.I)) {
 			inventoryOpen = !inventoryOpen;
 		}
-
-		if (inventoryOpen) {
-			if (Input.GetKeyDown(KeyCode.Alpha1)) {
-				Debug.Log(inventoryItems[0]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha2)) {
-				Debug.Log(inventoryItems[1]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha3)) {
-				Debug.Log(inventoryItems[2]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha4)) {
-				Debug.Log(inventoryItems[3]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha5)) {
-				Debug.Log(inventoryItems[4]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha6)) {
-				Debug.Log(inventoryItems[5]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha7)) {
-				Debug.Log(inventoryItems[6]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha8)) {
-				Debug.Log(inventoryItems[7]);
-			} else if (Input.GetKeyDown(KeyCode.Alpha9)) {
-				Debug.Log(inventoryItems[8]);
-			}
-		}
 	}
 
 	void OnGUI () {
@@ -52,13 +32,13 @@ public class Inventory : MonoBehaviour {
 	}
 
 	public bool addToInventory (string item) {
-		if (listOfItems[item] == null) {
+		if (itemsKey[item] == null) {
 			return false;
 		}
 
 		for (int i = 0; i < inventoryItems.Length; i++) {
 			if (inventoryItems[i] == -1) {
-				inventoryItems[i] = listOfItems[item].AsInt;
+				inventoryItems[i] = itemsKey[item].AsInt;
 
 				Debug.Log (item + " added to position: " + i.ToString());
 
@@ -67,5 +47,19 @@ public class Inventory : MonoBehaviour {
 		}
 
 		return true;
+	}
+
+	public GameObject getFromInventory (int position) {
+		if (inventoryItems[position] == -1) {
+			return null;
+		}
+
+		Debug.Log (itemsValue[inventoryItems[position]]);
+
+		return Resources.Load<GameObject>("Prefabs/" + itemsValue[inventoryItems[position]]);
+	}
+
+	public bool getInventoryOpen () {
+		return inventoryOpen;
 	}
 }
