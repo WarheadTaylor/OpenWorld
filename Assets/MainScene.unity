@@ -1886,7 +1886,6 @@ GameObject:
   - 4: {fileID: 1117593417}
   - 33: {fileID: 1117593416}
   - 23: {fileID: 1117593415}
-  - 111: {fileID: 1117593414}
   - 136: {fileID: 1117593413}
   - 65: {fileID: 1117593412}
   m_Layer: 0
@@ -1923,23 +1922,6 @@ CapsuleCollider:
   m_Height: .949999988
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: .449999988}
---- !u!111 &1117593414
-Animation:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11100000, guid: 34265f2f473bf2343ac884bfeb9b256c,
-    type: 2}
-  m_PrefabInternal: {fileID: 1746372646}
-  m_GameObject: {fileID: 1117593411}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  - {fileID: 7400002, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!23 &1117593415
 Renderer:
   m_ObjectHideFlags: 0

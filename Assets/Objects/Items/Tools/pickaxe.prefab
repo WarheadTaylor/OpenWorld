@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 400000}
   - 33: {fileID: 3300000}
   - 23: {fileID: 2300000}
-  - 111: {fileID: 11100000}
   - 136: {fileID: 13600000}
   - 65: {fileID: 6500000}
   m_Layer: 0
@@ -72,22 +71,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .800000012, y: .200000003, z: .230000004}
   m_Center: {x: -.0199999996, y: 0, z: 1}
---- !u!111 &11100000
-Animation:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  m_Animations:
-  - {fileID: 7400000, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  - {fileID: 7400002, guid: 71347d74e175c8c47b2835ffa8fa2fb9, type: 3}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!136 &13600000
 CapsuleCollider:
   m_ObjectHideFlags: 1
