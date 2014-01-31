@@ -31,6 +31,7 @@ ModelImporter:
     2300010: Cylinder007
     2300012: Cylinder008
     2300014: Cylinder009
+    2300016: //RootNode
     3300000: Cylinder001
     3300002: Cylinder003
     3300004: Cylinder004
@@ -39,6 +40,7 @@ ModelImporter:
     3300010: Cylinder007
     3300012: Cylinder008
     3300014: Cylinder009
+    3300016: //RootNode
     4300000: Cylinder001
     4300002: Cylinder003
     4300004: Cylinder004
@@ -55,11 +57,12 @@ ModelImporter:
     6400010: Cylinder007
     6400012: Cylinder008
     6400014: Cylinder009
+    6400016: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
-    materialName: 0
-    materialSearch: 1
+    materialName: 1
+    materialSearch: 2
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
