@@ -1726,6 +1726,7 @@ GameObject:
   - 23: {fileID: 977731213}
   - 65: {fileID: 977731212}
   - 136: {fileID: 977731211}
+  - 54: {fileID: 977731216}
   m_Layer: 0
   m_Name: axe
   m_TagString: Untagged
@@ -1802,6 +1803,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!54 &977731216
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 4516da54fbe3db04c824a912958c823a,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821136915}
+  m_GameObject: {fileID: 977731210}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!1 &983767872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,6 +1905,7 @@ GameObject:
   - 23: {fileID: 1117593415}
   - 136: {fileID: 1117593413}
   - 65: {fileID: 1117593412}
+  - 54: {fileID: 1117593414}
   m_Layer: 0
   m_Name: pickaxe
   m_TagString: Untagged
@@ -1922,6 +1940,22 @@ CapsuleCollider:
   m_Height: .949999988
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: .449999988}
+--- !u!54 &1117593414
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5400000, guid: 34265f2f473bf2343ac884bfeb9b256c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1746372646}
+  m_GameObject: {fileID: 1117593411}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 2
 --- !u!23 &1117593415
 Renderer:
   m_ObjectHideFlags: 0
