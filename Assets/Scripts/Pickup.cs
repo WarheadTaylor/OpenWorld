@@ -23,6 +23,7 @@ public class Pickup : MonoBehaviour {
 			} else {
 				if (objectHeld.GetComponent<Rigidbody>()) {
 					objectHeld.GetComponent<Rigidbody>().isKinematic = false;
+					objectHeld.GetComponent<Rigidbody>().AddForce (0, -1, 0);
 				}
 				objectHeld = null;
 			}
