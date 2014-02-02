@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class HUD : MonoBehaviour {
+public sealed class HUD : MonoBehaviour {
 	private int frameCount = 0;
 	private float dt = 0.0F;
 	private float fps = 0.0F;

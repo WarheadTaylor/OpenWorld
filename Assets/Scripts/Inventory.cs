@@ -2,7 +2,7 @@
 using System.Collections;
 using SimpleJSON;
 
-public class Inventory : MonoBehaviour {
+public sealed class Inventory : MonoBehaviour {
 	private int[] inventoryItems;
 	private bool inventoryOpen = false;
 
@@ -53,8 +53,6 @@ public class Inventory : MonoBehaviour {
 		if (inventoryItems[position] == -1) {
 			return null;
 		}
-
-		Debug.Log (itemsValue[inventoryItems[position]]);
 
 		return Resources.Load<GameObject>("Prefabs/" + itemsValue[inventoryItems[position]]);
 	}

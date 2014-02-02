@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Pickup : MonoBehaviour {
+public sealed class Pickup : MonoBehaviour {
 	private Transform firstPersonCamera;
 
 	private GameObject item;

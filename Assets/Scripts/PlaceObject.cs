@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlaceObject : MonoBehaviour {
+public sealed class PlaceObject : MonoBehaviour {
 	private Transform firstPersonCamera;
 
 	private bool inventoryOpen = false;

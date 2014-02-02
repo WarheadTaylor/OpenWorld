@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Utils : MonoBehaviour {
+public sealed class Utils : MonoBehaviour {
 
 	void Start () {
 		// Disable mouse in build
