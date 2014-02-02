@@ -468,7 +468,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!23 &254972967
 Renderer:
@@ -584,7 +584,7 @@ GameObject:
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 1
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &282873338
 Transform:
@@ -1889,7 +1889,6 @@ GameObject:
   - 33: {fileID: 738695068}
   - 23: {fileID: 738695067}
   - 64: {fileID: 738695066}
-  - 95: {fileID: 738695065}
   m_Layer: 0
   m_Name: stonerock_01
   m_TagString: Untagged
@@ -1897,21 +1896,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!95 &738695065
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 81878d98095c93c4fbf500ca65cabe9e,
-    type: 3}
-  m_PrefabInternal: {fileID: 391990314}
-  m_GameObject: {fileID: 738695064}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 81878d98095c93c4fbf500ca65cabe9e, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!64 &738695066
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3023,7 +3007,6 @@ GameObject:
   - 33: {fileID: 1141426355}
   - 23: {fileID: 1141426354}
   - 64: {fileID: 1141426353}
-  - 95: {fileID: 1141426352}
   m_Layer: 0
   m_Name: stonerock_02
   m_TagString: Untagged
@@ -3031,21 +3014,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!95 &1141426352
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 896500a4a5dc87f45b9ff95b8302ae93,
-    type: 3}
-  m_PrefabInternal: {fileID: 336994174}
-  m_GameObject: {fileID: 1141426351}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 896500a4a5dc87f45b9ff95b8302ae93, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!64 &1141426353
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3777,7 +3745,6 @@ GameObject:
   - 33: {fileID: 1623311043}
   - 23: {fileID: 1623311042}
   - 64: {fileID: 1623311041}
-  - 95: {fileID: 1623311040}
   m_Layer: 0
   m_Name: stonerock_03
   m_TagString: Untagged
@@ -3785,21 +3752,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
---- !u!95 &1623311040
-Animator:
-  serializedVersion: 2
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 9500000, guid: 507a0f3146d3b734e9a8149bf67cd456,
-    type: 3}
-  m_PrefabInternal: {fileID: 1628812268}
-  m_GameObject: {fileID: 1623311039}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 507a0f3146d3b734e9a8149bf67cd456, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
-  m_HasTransformHierarchy: 1
 --- !u!64 &1623311041
 MeshCollider:
   m_ObjectHideFlags: 0
