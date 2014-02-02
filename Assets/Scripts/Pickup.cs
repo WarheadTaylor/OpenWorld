@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 public sealed class Pickup : MonoBehaviour {
@@ -24,4 +24,4 @@ public sealed class Pickup : MonoBehaviour {
 			}
 		}
 	}
-}
+}*/

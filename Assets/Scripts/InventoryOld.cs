@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+
 using SimpleJSON;
 
-public sealed class Inventory : MonoBehaviour {
+public sealed class InventoryOld : MonoBehaviour {
 	private int[] inventoryItems;
 	private bool inventoryOpen = false;
 
-	private JSONNode itemsKey;
 	private JSONNode itemsValue;
+
+	private InventoryItem[] InventoryItems;
 
 	void Start () {
 		inventoryItems = new int[9];
-		itemsKey = JSON.Parse(Resources.Load<TextAsset>("TextAssets/itemsKey").text);
+		InventoryItems = new InventoryItem[9];
+
 		itemsValue = JSON.Parse(Resources.Load<TextAsset>("TextAssets/itemsValue").text);
 
 		for (int i = 0; i < inventoryItems.Length; i++) {
@@ -32,15 +35,13 @@ public sealed class Inventory : MonoBehaviour {
 	}
 
 	public bool addToInventory (string item) {
-		if (itemsKey[item] == null) {
-			return false;
-		}
+		for (int i = 0; i < InventoryItems.Length; i++) {
+			if (InventoryItems[i] == null) {
+				InventoryItems[i] = new InventoryItem(item);
 
-		for (int i = 0; i < inventoryItems.Length; i++) {
-			if (inventoryItems[i] == -1) {
-				inventoryItems[i] = itemsKey[item].AsInt;
-
-				Debug.Log (item + " added to position: " + i.ToString());
+				if (!InventoryItems[i].IsValid) {
+					InventoryItems[i] = null;
+				}
 
 				break;
 			}
