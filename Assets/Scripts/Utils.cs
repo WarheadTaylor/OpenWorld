@@ -8,9 +8,6 @@ public class Utils : MonoBehaviour {
 		if (!Application.isEditor) {
 			Screen.showCursor = false;
 		}
-
-		// Lock mouse to window.
-		Screen.lockCursor = true;
 	}
 
 	void Update () {
@@ -18,5 +15,8 @@ public class Utils : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Escape)) {
 			Application.Quit();
 		}
+
+		// Lock mouse to window.
+		Screen.lockCursor = true;
 	}
 }
