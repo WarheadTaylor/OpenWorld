@@ -1,16 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Utils : MonoBehaviour {
+public sealed class Utils : MonoBehaviour {
 
 	void Start () {
 		// Disable mouse in build
 		if (!Application.isEditor) {
 			Screen.showCursor = false;
 		}
-
-		// Lock mouse to window.
-		Screen.lockCursor = true;
 	}
 
 	void Update () {
@@ -18,5 +15,8 @@ public class Utils : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Escape)) {
 			Application.Quit();
 		}
+
+		// Lock mouse to window.
+		Screen.lockCursor = true;
 	}
 }

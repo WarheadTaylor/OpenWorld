@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TimeOfDay : MonoBehaviour {
+public sealed class TimeOfDay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

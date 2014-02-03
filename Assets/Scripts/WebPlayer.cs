@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class WebPlayer : MonoBehaviour {
+public sealed class WebPlayer : MonoBehaviour {
 	
 	void Start () {
 		

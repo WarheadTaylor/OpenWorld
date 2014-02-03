@@ -2,7 +2,7 @@
 using System.Collections;
 
 
-public class Player : MonoBehaviour {
+public sealed class Player : MonoBehaviour {
 	private CharacterController controller;
 	private Transform firstPersonCamera;
 	
