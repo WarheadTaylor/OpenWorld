@@ -6,10 +6,6 @@ public sealed class Inventory : MonoBehaviour {
 
 	void Start () {
 		InventoryItems = new InventoryItem[9];
-
-		for (int i = 0 ; i < InventoryItems.Length; i++) {
-			InventoryItems[i] = null;
-		}
 	}
 
 	public bool Insert (string name) {
@@ -32,5 +28,22 @@ public sealed class Inventory : MonoBehaviour {
 		}
 
 		return false;
+	}
+
+	public GameObject Remove (int inventoryIndex) {
+		InventoryItem Item = InventoryItems[inventoryIndex];
+		InventoryItems[inventoryIndex] = null;
+
+		Debug.Log(Item.GetName() + " removed at position: " + (inventoryIndex + 1));
+
+		return Item.GetItem();
+	}
+
+	public bool IfExists (int InventoryIndex) {
+		if (InventoryItems[InventoryIndex] != null) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 }

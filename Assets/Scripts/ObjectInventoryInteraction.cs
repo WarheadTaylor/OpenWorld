@@ -38,8 +38,14 @@ public sealed class ObjectInventoryInteraction : MonoBehaviour {
 		}
 	}
 
-	private void SelectItem (int KeyDown) {
+	private void SelectItem (int keyDown) {
+		if (!LocalInventory.IfExists(keyDown)) {
+			return;
+		}
 
+		GameObject Item = LocalInventory.Remove(keyDown);
+
+		GameObject.Instantiate(Item, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
 	}
 
 	private void InsertItem () {

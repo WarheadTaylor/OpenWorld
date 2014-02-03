@@ -16,8 +16,12 @@ public sealed class InventoryItem {
 		return Resources.Load<GameObject>("Prefabs/" + Name);
 	}
 
+	public string GetName () {
+		return Name;
+	}
+
 	private void ValidateItem (string name) {
-		JSONNode Result = JSON.Parse(Resources.Load<TextAsset>("TextAssets/itemsKey").text);
+		JSONNode Result = JSON.Parse(Resources.Load<TextAsset>("TextAssets/items").text);
 
 		if (Result[name].AsBool) {
 			IsValid = true;
