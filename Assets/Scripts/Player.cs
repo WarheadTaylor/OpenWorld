@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
 public sealed class Player : MonoBehaviour {
 	private CharacterController controller;
 	private Transform firstPersonCamera;

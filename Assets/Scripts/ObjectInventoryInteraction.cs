@@ -4,6 +4,7 @@ using System.Collections;
 public sealed class ObjectInventoryInteraction : MonoBehaviour {
 	private Transform FirstPersonCamera;
 	private Inventory LocalInventory;
+	private GameObject ItemInHand;
 
 	void Start () {
 		FirstPersonCamera = transform.Find("FirstPersonCamera");
@@ -43,9 +44,13 @@ public sealed class ObjectInventoryInteraction : MonoBehaviour {
 			return;
 		}
 
-		GameObject Item = LocalInventory.Remove(keyDown);
+		Destroy(ItemInHand);
 
-		GameObject.Instantiate(Item, new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+		ItemInHand = (GameObject) GameObject.Instantiate(LocalInventory.GetItem(keyDown));
+		ItemInHand.transform.parent = transform;
+		ItemInHand.GetComponent<Rigidbody>().detectCollisions = false;
+		ItemInHand.GetComponent<Rigidbody>().useGravity = false;
+		ItemInHand.transform.localPosition = FirstPersonCamera.transform.localPosition + new Vector3(0, -1.0F, 0.5F);
 	}
 
 	private void InsertItem () {
