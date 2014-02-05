@@ -160,6 +160,7 @@ GameObject:
   - 23: {fileID: 63759189}
   - 135: {fileID: 63759188}
   - 54: {fileID: 63759187}
+  - 64: {fileID: 63759192}
   m_Layer: 0
   m_Name: stonechip_02
   m_TagString: Untagged
@@ -175,14 +176,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 722544962}
   m_GameObject: {fileID: 63759186}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!135 &63759188
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -192,7 +193,7 @@ SphereCollider:
   m_GameObject: {fileID: 63759186}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000247
   m_Center: {x: .011227956, y: -.014461942, z: -.00387296407}
@@ -237,6 +238,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!64 &63759192
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: d38d7fe469d969049a797321f0c69d9d,
+    type: 2}
+  m_PrefabInternal: {fileID: 722544962}
+  m_GameObject: {fileID: 63759186}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 903c0222c8b978849a235327b2f2ddb6, type: 3}
 --- !u!1 &94475070
 GameObject:
   m_ObjectHideFlags: 0
@@ -522,7 +537,7 @@ Transform:
   m_PrefabInternal: {fileID: 2012607799}
   m_GameObject: {fileID: 254972966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.6498232, y: 1.08000004, z: 7.19151878}
+  m_LocalPosition: {x: 17.3122215, y: 1.08000004, z: 11.0703106}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 282873338}
@@ -719,6 +734,7 @@ GameObject:
   - 23: {fileID: 291740721}
   - 135: {fileID: 291740720}
   - 54: {fileID: 291740724}
+  - 64: {fileID: 291740725}
   m_Layer: 0
   m_Name: stonechip_01
   m_TagString: Untagged
@@ -735,7 +751,7 @@ SphereCollider:
   m_GameObject: {fileID: 291740719}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000024
   m_Center: {x: .0135553647, y: -.0154918469, z: -.00387296267}
@@ -788,14 +804,28 @@ Rigidbody:
   m_PrefabInternal: {fileID: 124156954}
   m_GameObject: {fileID: 291740719}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
+--- !u!64 &291740725
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 2e49debe8d4ef1647bf2ddba6bfa0ec3,
+    type: 2}
+  m_PrefabInternal: {fileID: 124156954}
+  m_GameObject: {fileID: 291740719}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 280b4a8e3a894534cb2a4882fe7120a1, type: 3}
 --- !u!1 &297041773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,6 +1510,7 @@ GameObject:
   - 23: {fileID: 557158739}
   - 135: {fileID: 557158738}
   - 54: {fileID: 557158737}
+  - 64: {fileID: 557158742}
   m_Layer: 0
   m_Name: stonechip_01
   m_TagString: Untagged
@@ -1495,14 +1526,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1939628459}
   m_GameObject: {fileID: 557158736}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!135 &557158738
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1512,7 +1543,7 @@ SphereCollider:
   m_GameObject: {fileID: 557158736}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000024
   m_Center: {x: .0135553647, y: -.0154918469, z: -.00387296267}
@@ -1557,6 +1588,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!64 &557158742
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 2e49debe8d4ef1647bf2ddba6bfa0ec3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1939628459}
+  m_GameObject: {fileID: 557158736}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 280b4a8e3a894534cb2a4882fe7120a1, type: 3}
 --- !u!1001 &591179016
 Prefab:
   m_ObjectHideFlags: 0
@@ -1976,6 +2021,7 @@ GameObject:
   - 23: {fileID: 756320113}
   - 135: {fileID: 756320112}
   - 54: {fileID: 756320116}
+  - 64: {fileID: 756320117}
   m_Layer: 0
   m_Name: stonechip_03
   m_TagString: Untagged
@@ -1992,7 +2038,7 @@ SphereCollider:
   m_GameObject: {fileID: 756320111}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000136
   m_Center: {x: .0135553647, y: -.0174283329, z: -.00464755762}
@@ -2045,14 +2091,28 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1930740852}
   m_GameObject: {fileID: 756320111}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
+--- !u!64 &756320117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 10f0385a1a3f2954d9803cf9c7974d0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1930740852}
+  m_GameObject: {fileID: 756320111}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 340bcfe0353168249b046304d462d670, type: 3}
 --- !u!1 &801277652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2163,7 @@ GameObject:
   - 23: {fileID: 833895911}
   - 135: {fileID: 833895910}
   - 54: {fileID: 833895909}
+  - 64: {fileID: 833895914}
   m_Layer: 0
   m_Name: stonechip_03
   m_TagString: Untagged
@@ -2118,14 +2179,14 @@ Rigidbody:
   m_PrefabInternal: {fileID: 1107151293}
   m_GameObject: {fileID: 833895908}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
 --- !u!135 &833895910
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2135,7 +2196,7 @@ SphereCollider:
   m_GameObject: {fileID: 833895908}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000136
   m_Center: {x: .0135553647, y: -.0174283329, z: -.00464755762}
@@ -2180,6 +2241,20 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!64 &833895914
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: 10f0385a1a3f2954d9803cf9c7974d0c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1107151293}
+  m_GameObject: {fileID: 833895908}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 340bcfe0353168249b046304d462d670, type: 3}
 --- !u!1 &838223549
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,6 +3399,7 @@ GameObject:
   - 23: {fileID: 1390882765}
   - 135: {fileID: 1390882764}
   - 54: {fileID: 1390882768}
+  - 64: {fileID: 1390882769}
   m_Layer: 0
   m_Name: stonechip_02
   m_TagString: Untagged
@@ -3340,7 +3416,7 @@ SphereCollider:
   m_GameObject: {fileID: 1390882763}
   m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Radius: .0600000247
   m_Center: {x: .011227956, y: -.014461942, z: -.00387296407}
@@ -3393,14 +3469,28 @@ Rigidbody:
   m_PrefabInternal: {fileID: 116059315}
   m_GameObject: {fileID: 1390882763}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: .100000001
   m_Drag: .5
   m_AngularDrag: .0500000007
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 2
+  m_CollisionDetection: 0
+--- !u!64 &1390882769
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6400000, guid: d38d7fe469d969049a797321f0c69d9d,
+    type: 2}
+  m_PrefabInternal: {fileID: 116059315}
+  m_GameObject: {fileID: 1390882763}
+  m_Material: {fileID: 13400000, guid: 72f50b45c9524d14aa8388c43d8cf87f, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_SmoothSphereCollisions: 0
+  m_Convex: 1
+  m_Mesh: {fileID: 4300000, guid: 903c0222c8b978849a235327b2f2ddb6, type: 3}
 --- !u!1001 &1398518283
 Prefab:
   m_ObjectHideFlags: 0
@@ -4542,6 +4632,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106829
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: 2e49debe8d4ef1647bf2ddba6bfa0ec3, type: 2}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e49debe8d4ef1647bf2ddba6bfa0ec3, type: 2}
   m_RootGameObject: {fileID: 557158736}
@@ -4636,7 +4730,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 8166304477afc884e90d5581b3b229ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 13.6498232
+      value: 17.3122215
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8166304477afc884e90d5581b3b229ff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -4644,7 +4738,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8166304477afc884e90d5581b3b229ff, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 7.19151878
+      value: 11.0703106
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8166304477afc884e90d5581b3b229ff, type: 2}
       propertyPath: m_LocalRotation.x
