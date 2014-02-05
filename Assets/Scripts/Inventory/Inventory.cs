@@ -22,7 +22,7 @@ public sealed class Inventory : MonoBehaviour {
 				return false;
 			}
 
-			Debug.Log(name + " added to inventory slot: " + (i + 1));
+			Utils.PyroLog(name + " added to inventory slot: " + (i + 1));
 
 			return true;
 		}
@@ -34,7 +34,13 @@ public sealed class Inventory : MonoBehaviour {
 		InventoryItem Item = InventoryItems[inventoryIndex];
 		InventoryItems[inventoryIndex] = null;
 
-		Debug.Log(Item.GetName() + " removed at position: " + (inventoryIndex + 1));
+		Utils.PyroLog(Item.GetName() + " removed at position: " + (inventoryIndex + 1));
+
+		return Item.GetItem();
+	}
+
+	public GameObject GetItem (int inventoryIndex) {
+		InventoryItem Item = InventoryItems[inventoryIndex];
 
 		return Item.GetItem();
 	}

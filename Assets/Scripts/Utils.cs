@@ -19,4 +19,10 @@ public sealed class Utils : MonoBehaviour {
 		// Lock mouse to window.
 		Screen.lockCursor = true;
 	}
+
+	public static void PyroLog (string logMessage) {
+		if (Debug.isDebugBuild) {
+			Debug.Log(logMessage);
+		}
+	}
 }
