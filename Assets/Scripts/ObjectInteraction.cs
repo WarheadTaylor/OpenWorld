@@ -1,10 +1,11 @@
 using UnityEngine;
 using System.Collections;
 
-public sealed class ObjectInventoryInteraction : MonoBehaviour {
+public sealed class ObjectInteraction : MonoBehaviour {
+	public GameObject ItemInHand;
+
 	private Transform FirstPersonCamera;
 	private Inventory LocalInventory;
-	private GameObject ItemInHand;
 
 	void Start () {
 		FirstPersonCamera = transform.Find("FirstPersonCamera");
@@ -40,17 +41,19 @@ public sealed class ObjectInventoryInteraction : MonoBehaviour {
 	}
 
 	private void SelectItem (int keyDown) {
-		if (!LocalInventory.IfExists(keyDown)) {
-			return;
-		}
-
 		Destroy(ItemInHand);
 
-		ItemInHand = (GameObject) GameObject.Instantiate(LocalInventory.GetItem(keyDown));
-		ItemInHand.transform.parent = transform;
-		ItemInHand.GetComponent<Rigidbody>().detectCollisions = false;
-		ItemInHand.GetComponent<Rigidbody>().useGravity = false;
-		ItemInHand.transform.localPosition = FirstPersonCamera.transform.localPosition + new Vector3(0, -1.0F, 0.5F);
+		if (LocalInventory.IfExists(keyDown)) {
+			ItemInHand = (GameObject) GameObject.Instantiate(LocalInventory.GetItem(keyDown));
+			ItemInHand.GetComponent<Rigidbody>().detectCollisions = false;
+			ItemInHand.GetComponent<Rigidbody>().useGravity = false;
+		} else {
+			ItemInHand = new GameObject("Empty Inventory Slot");
+		}
+
+		ItemInHand.transform.parent = FirstPersonCamera.transform.Find("Hand").transform;
+		ItemInHand.transform.localPosition = Vector3.zero;
+		ItemInHand.transform.localRotation = Quaternion.identity;
 	}
 
 	private void InsertItem () {
