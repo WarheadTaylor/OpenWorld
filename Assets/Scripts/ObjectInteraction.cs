@@ -53,6 +53,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 			ItemInHand = (GameObject) GameObject.Instantiate(LocalInventory.GetItem(keyDown));
 			ItemInHand.GetComponent<Rigidbody>().detectCollisions = false;
 			ItemInHand.GetComponent<Rigidbody>().useGravity = false;
+			ItemInHand.GetComponent<Animation>().Play("idle");
 		} else {
 			ItemInHand = new GameObject("Empty Inventory Slot");
 		}
