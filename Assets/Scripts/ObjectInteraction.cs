@@ -10,6 +10,8 @@ public sealed class ObjectInteraction : MonoBehaviour {
 	void Start () {
 		FirstPersonCamera = transform.Find("FirstPersonCamera");
 		LocalInventory = transform.GetComponent<Inventory>();
+
+		ItemInHand = new GameObject("Empty Inventory Slot");
 	}
 
 	void Update () {
@@ -37,12 +39,6 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		// Control pickup
 		if (Input.GetKeyDown(KeyCode.E)) {
 			InsertItem();
-		}
-
-		if (Input.GetKeyDown(KeyCode.Mouse0)) {
-			if (ItemInHand.name != "Empty Inventory Slot") {
-				ItemInHand.GetComponent<Animation>().Play("hit");
-			}
 		}
 	}
 

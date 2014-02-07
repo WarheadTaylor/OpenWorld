@@ -11,7 +11,7 @@ public sealed class UseWeapon : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
 			if (LocalObjectInteraction.ItemInHand.tag == "Weapon") {
-				Utils.PyroLog("Hello");
+				LocalObjectInteraction.ItemInHand.GetComponent<Animation>().Play("hit");
 			}
 		}
 	}
