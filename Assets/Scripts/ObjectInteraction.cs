@@ -40,7 +40,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown(KeyCode.Mouse0)) {
-			if (ItemInHand != null) {
+			if (ItemInHand.name != "Empty Inventory Slot") {
 				ItemInHand.GetComponent<Animation>().Play("hit");
 			}
 		}

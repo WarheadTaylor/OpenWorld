@@ -251,7 +251,7 @@ GameObject:
   - 111: {fileID: 591688292}
   m_Layer: 0
   m_Name: axe
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -826,6 +826,10 @@ Prefab:
     - target: {fileID: 400000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
