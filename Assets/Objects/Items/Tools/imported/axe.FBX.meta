@@ -39,7 +39,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
-    animationCompression: 3
+    animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
     animationScaleError: .5
@@ -49,7 +49,7 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
-      firstFrame: 83
+      firstFrame: 82
       lastFrame: 120
       wrapMode: 2
       orientationOffsetY: 0
@@ -78,20 +78,20 @@ ModelImporter:
       name: hit
       takeName: Take 001
       firstFrame: 3
-      lastFrame: 43
-      wrapMode: 0
+      lastFrame: 44
+      wrapMode: 1
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -165,6 +165,6 @@ ModelImporter:
     feetSpacing: 0
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 1
   additionalBone: 0
   userData: 
