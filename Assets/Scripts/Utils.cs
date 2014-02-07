@@ -2,6 +2,7 @@
 using System.Collections;
 
 public sealed class Utils : MonoBehaviour {
+	public bool LockCursor = false;
 
 	void Start () {
 		// Disable mouse in build
@@ -17,7 +18,9 @@ public sealed class Utils : MonoBehaviour {
 		}
 
 		// Lock mouse to window.
-		Screen.lockCursor = true;
+		if (LockCursor) {
+			Screen.lockCursor = true;
+		}
 	}
 
 	public static void PyroLog (string logMessage) {
