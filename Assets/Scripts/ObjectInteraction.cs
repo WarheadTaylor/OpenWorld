@@ -38,6 +38,12 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.E)) {
 			InsertItem();
 		}
+
+		if (Input.GetKeyDown(KeyCode.Mouse0)) {
+			if (ItemInHand != null) {
+				ItemInHand.GetComponent<Animation>().Play("hit");
+			}
+		}
 	}
 
 	private void SelectItem (int keyDown) {
