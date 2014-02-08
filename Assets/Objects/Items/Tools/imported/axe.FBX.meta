@@ -49,8 +49,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: Take 001
-      firstFrame: 82
-      lastFrame: 120
+      firstFrame: 10
+      lastFrame: 100
       wrapMode: 2
       orientationOffsetY: 0
       level: 0
@@ -77,8 +77,8 @@ ModelImporter:
     - serializedVersion: 16
       name: hit
       takeName: Take 001
-      firstFrame: 3
-      lastFrame: 44
+      firstFrame: 110
+      lastFrame: 155
       wrapMode: 1
       orientationOffsetY: 0
       level: 0
@@ -92,34 +92,6 @@ ModelImporter:
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 1
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask:
-      - path: 
-        weight: 1
-      maskType: 0
-      maskSource: {instanceID: 0}
-    - serializedVersion: 16
-      name: walking
-      takeName: Take 001
-      firstFrame: 60
-      lastFrame: 75
-      wrapMode: 2
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
       heightFromFeet: 0
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
