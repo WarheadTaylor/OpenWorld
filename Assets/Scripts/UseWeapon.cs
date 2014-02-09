@@ -32,8 +32,10 @@ public sealed class UseWeapon : MonoBehaviour {
 					Destroy(hit.transform.gameObject);
 
 					GameObject Log = Resources.Load<GameObject>("evergreenlog_01");
+					GameObject LogCreated;
 					for (int i = 0; i < 3; i++) {
-						Instantiate(Log, hit.transform.position + new Vector3(i, i, i), Quaternion.identity);
+						LogCreated = (GameObject) Instantiate(Log, hit.transform.position + new Vector3(0, i, 0), Quaternion.identity);
+						LogCreated.rigidbody.AddForce(new Vector3(1, 0, 1), ForceMode.Impulse);
 					}
 				}
 			}
