@@ -3,13 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class EnemyWithinRange : MonoBehaviour {
-	private List<GameObject> Enemies;
-
 	private float TimePast = 0.0F;
-
-	private void Start () {
-		Enemies = new List<GameObject>();
-	}
 
 	private void FixedUpdate () {
 		TimePast += Time.deltaTime;
@@ -23,12 +17,11 @@ public class EnemyWithinRange : MonoBehaviour {
 		foreach (Collider collider in Physics.OverlapSphere(transform.position, 10.0F)) {
 			GameObject hit = collider.transform.gameObject;
 
-			if (!Enemies.Contains(hit)) {
-				Enemies.Add(hit);
-				print(hit);
+			if (hit.tag != "Enemy") {
+				continue;
 			}
-		}
 
-		print(Enemies.ToArray().Length);
+			hit.GetComponent<FollowPlayer>().ActivateFollow(transform.position);
+		}
 	}
 }

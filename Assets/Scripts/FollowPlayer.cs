@@ -4,7 +4,7 @@ using System.Collections;
 using Pathfinding;
 
 public class FollowPlayer : MonoBehaviour {
-/*	private Seeker Seeker;
+	private Seeker Seeker;
 	private CharacterController Controller;
 
 	private Path Path;
@@ -15,17 +15,10 @@ public class FollowPlayer : MonoBehaviour {
 	private void Start () {
 		Seeker = GetComponent<Seeker>();
 		Controller = GetComponent<CharacterController>();
-
-		//Seeker.StartPath(transform.position, new Vector3(23.0F, 0, 17.0F), OnPathComplete);
 	}
 
 	private void FixedUpdate () {
-
-		if (Path == null) {
-			return;
-		}
-
-		if (CurrentWaypoint >= Path.vectorPath.Count) {
+		if (Path == null || CurrentWaypoint >= Path.vectorPath.Count) {
 			return;
 		}
 
@@ -46,5 +39,9 @@ public class FollowPlayer : MonoBehaviour {
 			Path = p;
 			CurrentWaypoint = 0;
 		}
-	}*/
+	}
+
+	public void ActivateFollow (Vector3 playerPosition) {
+		Seeker.StartPath(transform.position, playerPosition, OnPathComplete);
+	}
 }
