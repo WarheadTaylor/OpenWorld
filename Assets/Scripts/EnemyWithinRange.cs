@@ -8,7 +8,7 @@ public class EnemyWithinRange : MonoBehaviour {
 	private void FixedUpdate () {
 		TimePast += Time.deltaTime;
 
-		if (TimePast < 3.0F) {
+		if (TimePast < 1.0F) {
 			return;
 		}
 

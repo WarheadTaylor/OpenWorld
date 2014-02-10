@@ -42,6 +42,9 @@ public class FollowPlayer : MonoBehaviour {
 	}
 
 	public void ActivateFollow (Vector3 playerPosition) {
+		Path = null;
+		NextWaypointDistance = 3.0F;
+		CurrentWaypoint = 0;
 		Seeker.StartPath(transform.position, playerPosition, OnPathComplete);
 	}
 }
