@@ -12,12 +12,27 @@ public class FollowPlayer : MonoBehaviour {
 	private float NextWaypointDistance = 3.0F;
 	private int CurrentWaypoint = 0;
 
+	private GameObject Player;
+	private float LastPathRebuild = 0.4F;
+
 	private void Start () {
 		Seeker = GetComponent<Seeker>();
 		Controller = GetComponent<CharacterController>();
+		Player = GameObject.Find("Player");
 	}
 
 	private void FixedUpdate () {
+		LastPathRebuild += Time.deltaTime;
+
+		if (Vector3.Distance(transform.position, Player.transform.position) > 20.0F) {
+			return;
+		}
+
+		if (LastPathRebuild > 0.3F) {
+			Seeker.StartPath(transform.position, Player.transform.position, OnPathComplete);
+			LastPathRebuild = 0.0F;
+		}
+
 		if (Path == null || CurrentWaypoint >= Path.vectorPath.Count) {
 			return;
 		}
@@ -39,12 +54,5 @@ public class FollowPlayer : MonoBehaviour {
 			Path = p;
 			CurrentWaypoint = 0;
 		}
-	}
-
-	public void ActivateFollow (Vector3 playerPosition) {
-		Path = null;
-		NextWaypointDistance = 3.0F;
-		CurrentWaypoint = 0;
-		Seeker.StartPath(transform.position, playerPosition, OnPathComplete);
 	}
 }
