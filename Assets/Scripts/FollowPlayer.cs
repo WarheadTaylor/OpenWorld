@@ -9,7 +9,7 @@ public class FollowPlayer : MonoBehaviour {
 
 	private Path Path;
 
-	private float NextWaypointDistance = 3.0F;
+	private float NextWaypointDistance = 1.1F;
 	private int CurrentWaypoint = 0;
 
 	private GameObject Player;
@@ -37,14 +37,15 @@ public class FollowPlayer : MonoBehaviour {
 			return;
 		}
 
+		if (Vector3.Distance(transform.position, Path.vectorPath[CurrentWaypoint]) < NextWaypointDistance) {
+			CurrentWaypoint++;
+
+			return;
+		}
+
 		Vector3 dir = (Path.vectorPath[CurrentWaypoint] - transform.position).normalized;
 		dir *= 3.0F * Time.deltaTime;
 		Controller.Move(dir);
-
-		if (Vector3.Distance(transform.position, Path.vectorPath[CurrentWaypoint]) < NextWaypointDistance) {
-			CurrentWaypoint++;
-			return;
-		}
 	}
 
 	private void OnPathComplete (Path p) {

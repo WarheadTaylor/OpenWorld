@@ -41,5 +41,4 @@ public sealed class UseWeapon : MonoBehaviour {
 			}
 		}
 	}
-
 }
