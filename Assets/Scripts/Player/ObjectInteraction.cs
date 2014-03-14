@@ -4,6 +4,8 @@ using System.Collections;
 public sealed class ObjectInteraction : MonoBehaviour {
 	public GameObject ItemInHand;
 
+	private int SelectedItem;
+
 	private Transform FirstPersonCamera;
 	private Inventory LocalInventory;
 
@@ -40,10 +42,17 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		if (Input.GetKeyDown(KeyCode.E)) {
 			InsertItem();
 		}
+
+		// Control drop
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			DropItem();
+		}
 	}
 
 	private void SelectItem (int keyDown) {
 		Destroy(ItemInHand);
+
+		SelectedItem = keyDown;
 
 		if (LocalInventory.IfExists(keyDown)) {
 			ItemInHand = (GameObject) GameObject.Instantiate(LocalInventory.GetItem(keyDown));
@@ -68,5 +77,14 @@ public sealed class ObjectInteraction : MonoBehaviour {
 				DestroyObject(item);
 			}
 		}
+	}
+
+	private void DropItem () {
+		LocalInventory.Remove(SelectedItem);
+
+		GameObject DropedItem = (GameObject) Instantiate(ItemInHand, transform.position, transform.rotation);
+		DropedItem.rigidbody.velocity = transform.TransformDirection (Vector3.forward * 10);
+
+		Destroy(ItemInHand);
 	}
 }
