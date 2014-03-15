@@ -15,7 +15,7 @@ GameObject:
   - 54: {fileID: 5400000}
   - 111: {fileID: 11100000}
   - 114: {fileID: 11400000}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: axe
   m_TagString: Weapon
   m_Icon: {fileID: 0}

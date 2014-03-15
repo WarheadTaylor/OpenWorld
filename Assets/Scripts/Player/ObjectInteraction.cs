@@ -60,6 +60,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 			ItemInHand.GetComponent<Rigidbody>().useGravity = false;
 			//Taylor's bullshit play idle animation when you select item
 			ItemInHand.GetComponent<Animation>().Play("idle");
+            ItemInHand.layer = LayerMask.NameToLayer("Weapon");
 		} else {
 			ItemInHand = new GameObject("Empty Inventory Slot");
 		}
@@ -84,6 +85,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 
 		GameObject DropedItem = (GameObject) Instantiate(ItemInHand, transform.position, transform.rotation);
 		DropedItem.rigidbody.velocity = transform.TransformDirection (Vector3.forward * 10);
+        DropedItem.layer = LayerMask.NameToLayer("Default");
 
 		Destroy(ItemInHand);
 	}

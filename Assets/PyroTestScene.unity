@@ -608,7 +608,7 @@ GameObject:
   - 54: {fileID: 591688286}
   - 111: {fileID: 591688292}
   - 114: {fileID: 591688293}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: axe
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -892,7 +892,7 @@ GameObject:
   - 54: {fileID: 859575406}
   - 114: {fileID: 859575405}
   - 111: {fileID: 859575412}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: pickaxe
   m_TagString: Weapon
   m_Icon: {fileID: 0}
@@ -1442,6 +1442,10 @@ Prefab:
     - target: {fileID: 400000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
       propertyPath: m_LocalRotation.w
       value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
+      propertyPath: m_TagString
+      value: Weapon
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecd459df36fcb3249841f4d49e4d1392, type: 2}
