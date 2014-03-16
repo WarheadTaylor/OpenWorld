@@ -83,11 +83,11 @@ public sealed class ObjectInteraction : MonoBehaviour {
 	private void DropItem () {
 		LocalInventory.Remove(SelectedItem);
 
-		GameObject DropedItem = (GameObject) Instantiate(ItemInHand, transform.position, transform.rotation);
-		DropedItem.rigidbody.velocity = transform.TransformDirection (Vector3.forward * (Input.GetAxis("Vertical") + 1) * 5);
-		DropedItem.GetComponent<Rigidbody>().detectCollisions = true;
-		DropedItem.GetComponent<Rigidbody>().useGravity = true;
-        DropedItem.layer = LayerMask.NameToLayer("Default");
+		GameObject DroppedItem = (GameObject) Instantiate(ItemInHand, transform.position, transform.rotation);
+		DroppedItem.rigidbody.velocity = transform.TransformDirection (Vector3.forward * (Input.GetAxis("Vertical") + 1) * 3);
+		DroppedItem.GetComponent<Rigidbody>().detectCollisions = true;
+		DroppedItem.GetComponent<Rigidbody>().useGravity = true;
+        DroppedItem.layer = LayerMask.NameToLayer("Default");
 
 		Destroy(ItemInHand);
 	}
