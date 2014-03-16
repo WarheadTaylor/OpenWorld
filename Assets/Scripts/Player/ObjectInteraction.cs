@@ -88,6 +88,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		DroppedItem.GetComponent<Rigidbody>().detectCollisions = true;
 		DroppedItem.GetComponent<Rigidbody>().useGravity = true;
         DroppedItem.layer = LayerMask.NameToLayer("Default");
+		DroppedItem.name = DroppedItem.name.Substring(0, DroppedItem.name.IndexOf("(Clone)"));
 
 		Destroy(ItemInHand);
 	}
