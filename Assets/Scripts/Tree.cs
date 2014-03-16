@@ -1,10 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Tree : MonoBehaviour {
-	private int TimesHit = 0;
+public class Tree : InteractableObject {
 
-	public void Hit() {
-
-	}
 }
