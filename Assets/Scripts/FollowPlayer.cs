@@ -46,6 +46,11 @@ public class FollowPlayer : MonoBehaviour {
 		Vector3 dir = (Path.vectorPath[CurrentWaypoint] - transform.position).normalized;
 		dir *= 3.0F * Time.deltaTime;
 		Controller.Move(dir);
+
+		// Attack player
+		if (Vector3.Distance(transform.position, Player.transform.position) <= 2.0F) {
+			Player.GetComponent<PlayerStats>().RemoveHealth(10);
+		}
 	}
 
 	private void OnPathComplete (Path p) {
