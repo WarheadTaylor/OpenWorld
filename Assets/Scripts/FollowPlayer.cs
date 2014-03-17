@@ -49,8 +49,6 @@ public class FollowPlayer : MonoBehaviour {
 	}
 
 	private void OnPathComplete (Path p) {
-		Utils.PyroLog("Yey, we got a path back. Did it have an error? " + p.error);
-
 		if (!p.error) {
 			Path = p;
 			CurrentWaypoint = 0;
