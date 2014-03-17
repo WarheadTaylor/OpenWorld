@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+using Pathfinding;
+
 public abstract class InteractableObject : MonoBehaviour {
 	private int TimesHit = 0;
 
@@ -11,7 +13,10 @@ public abstract class InteractableObject : MonoBehaviour {
 		TimesHit++;
 
 		if (TimesHit == MaxTimesHit) {
+			Collider ObjectCollider = gameObject.collider;
 			Destroy(transform.gameObject);
+
+			AstarPath.active.UpdateGraphs(ObjectCollider.bounds);
 
 			GameObject Log = Resources.Load<GameObject>("evergreenlog_01");
 			GameObject LogCreated;

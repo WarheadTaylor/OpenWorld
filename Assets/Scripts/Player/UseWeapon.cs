@@ -5,8 +5,6 @@ public sealed class UseWeapon : MonoBehaviour {
 	private Transform FirstPersonCamera;
 	private ObjectInteraction LocalObjectInteraction;
 
-	private int TimesHit = 0;
-
 	void Start () {
 		FirstPersonCamera = transform.Find("FirstPersonCamera");
 		LocalObjectInteraction = transform.GetComponent<ObjectInteraction>();
