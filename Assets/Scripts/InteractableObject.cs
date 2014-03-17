@@ -1,8 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-using Pathfinding;
-
 public abstract class InteractableObject : MonoBehaviour {
 	private int TimesHit = 0;
 
