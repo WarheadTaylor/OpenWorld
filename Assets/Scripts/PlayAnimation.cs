@@ -10,6 +10,6 @@ public sealed class PlayAnimation : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		animation.Play("hit");
+		GetComponent<Animation>().Play("hit");
 	}
 }

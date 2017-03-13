@@ -7,7 +7,7 @@ public sealed class Utils : MonoBehaviour {
 	void Start () {
 		// Disable mouse in build
 		if (!Application.isEditor) {
-			Screen.showCursor = false;
+			Cursor.visible = false;
 		}
 	}
 

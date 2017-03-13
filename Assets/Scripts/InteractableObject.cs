@@ -11,7 +11,7 @@ public abstract class InteractableObject : MonoBehaviour {
 		TimesHit++;
 
 		if (TimesHit == MaxTimesHit) {
-			Collider ObjectCollider = gameObject.collider;
+			Collider ObjectCollider = gameObject.GetComponent<Collider>();
 			Destroy(transform.gameObject);
 
 			AstarPath.active.UpdateGraphs(ObjectCollider.bounds);
@@ -20,7 +20,7 @@ public abstract class InteractableObject : MonoBehaviour {
 			GameObject LogCreated;
 			for (int i = 0; i < AmountToCreate; i++) {
 				LogCreated = (GameObject) Instantiate(Log, transform.position + new Vector3(0, i, 0), Quaternion.identity);
-				LogCreated.rigidbody.AddForce(new Vector3(1, 0, 1), ForceMode.Impulse);
+				LogCreated.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 1), ForceMode.Impulse);
 			}
 		}
 	}
