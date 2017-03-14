@@ -1,12 +1,12 @@
 //#define ASTARDEBUG    //Some debugging
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Serialization.JsonFx;
 using Pathfinding.Serialization;
 
-namespace Pathfinding {
-	public interface INavmesh {
+namespace Pathfinding
+{
+    public interface INavmesh {
 		
 		//TriangleMeshNode[] TriNodes {get;}
 		void GetNodes(GraphNodeDelegateCancelable del);

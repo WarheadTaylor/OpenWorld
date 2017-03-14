@@ -5,11 +5,11 @@
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using Pathfinding;
 using UnityEngine.Profiling;
 
-namespace Pathfinding {
-	public class AstarProfiler
+namespace Pathfinding
+{
+    public class AstarProfiler
 	{
 		public class ProfilePoint
 		{

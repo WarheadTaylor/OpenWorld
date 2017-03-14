@@ -1,14 +1,13 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pathfinding;
 
-namespace Pathfinding {
-	/** Simplifies a path using raycasting.
+namespace Pathfinding
+{
+    /** Simplifies a path using raycasting.
 	 * \ingroup modifiers
 	 * This modifier will try to remove as many nodes as possible from the path using raycasting (linecasting) to validate the node removal.
 	 * Either graph raycasts or Physics.Raycast */
-	[AddComponentMenu ("Pathfinding/Modifiers/Raycast Simplifier")]
+    [AddComponentMenu ("Pathfinding/Modifiers/Raycast Simplifier")]
 	[System.Serializable]
 	public class RaycastModifier : MonoModifier {
 		

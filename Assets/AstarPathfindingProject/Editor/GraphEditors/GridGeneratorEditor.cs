@@ -8,18 +8,17 @@
 
 using UnityEngine;
 using UnityEditor;
-using Pathfinding;
-using System.Collections;
 using Pathfinding.Serialization.JsonFx;
 
-namespace Pathfinding {
-	/*
+namespace Pathfinding
+{
+    /*
 	#if !AstarRelease
 	[CustomGraphEditor (typeof(CustomGridGraph),"CustomGrid Graph")]
 	//[CustomGraphEditor (typeof(LineTraceGraph),"Grid Tracing Graph")]
 	#endif
 	*/
-	[CustomGraphEditor (typeof(GridGraph),"Grid Graph")]
+    [CustomGraphEditor (typeof(GridGraph),"Grid Graph")]
 	public class GridGraphEditor : GraphEditor {
 		
 		[JsonMember]

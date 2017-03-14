@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 /** Smooth Camera Following.
  * \author http://wiki.unity3d.com/index.php/SmoothFollow2

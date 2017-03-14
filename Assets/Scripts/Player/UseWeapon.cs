@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public sealed class UseWeapon : MonoBehaviour {
 	private Transform FirstPersonCamera;

@@ -1,13 +1,11 @@
 //#define ASTAR_PROFILE
 
-using Pathfinding;
-using Pathfinding.Util;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace Pathfinding
 {
-	/** Contains useful functions for working with paths and nodes.
+    /** Contains useful functions for working with paths and nodes.
 	 * This class works a lot with the Node class, a useful function to get nodes is AstarPath.GetNearest.
 	  * \see AstarPath.GetNearest
 	  * \see Pathfinding.Utils.GraphUpdateUtilities
@@ -15,7 +13,7 @@ namespace Pathfinding
 	  * \ingroup utils
 	  * 
 	  */
-	public static class PathUtilities {
+    public static class PathUtilities {
 		/** Returns if there is a walkable path from \a n1 to \a n2.
 		 * If you are making changes to the graph, areas must first be recaculated using FloodFill()
 		 * \note This might return true for small areas even if there is no possible path if AstarPath.minAreaSize is greater than zero (0).

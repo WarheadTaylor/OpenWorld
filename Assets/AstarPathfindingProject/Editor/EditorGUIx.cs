@@ -8,14 +8,13 @@
 #endif
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using Pathfinding;
 
-namespace Pathfinding {
-	/** Simple GUIUtility functions */
-	public class GUIUtilityx {
+namespace Pathfinding
+{
+    /** Simple GUIUtility functions */
+    public class GUIUtilityx {
 		
 		public static Color prevCol;
 		public static void SetColor (Color col) {

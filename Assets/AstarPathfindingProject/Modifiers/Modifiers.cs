@@ -1,10 +1,9 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
-namespace Pathfinding {
-	//To be able to serialize modifiers, we store it in a holder which can contain any modifier type
-	/*[System.Serializable]
+namespace Pathfinding
+{
+    //To be able to serialize modifiers, we store it in a holder which can contain any modifier type
+    /*[System.Serializable]
 	public class ModifierHolder {
 		public int activeModifier;
 		
@@ -36,9 +35,9 @@ namespace Pathfinding {
 			return GetModifier ().Apply (path, start, end);
 		}
 	}*/
-	
-	/** Defines inputs and outputs for a modifier */
-	[System.Flags]
+
+    /** Defines inputs and outputs for a modifier */
+    [System.Flags]
 	public enum ModifierData {
 		All					= -1,		/**< All bits set to 1 */
 		StrictNodePath 		= 1 << 0,	/**< Node array with original length */

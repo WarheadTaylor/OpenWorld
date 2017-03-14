@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[AddComponentMenu("Pathfinding/Modifiers/Alternative Path")]
+namespace Pathfinding
+{
+    [AddComponentMenu("Pathfinding/Modifiers/Alternative Path")]
 	[System.Serializable]
 	/** Applies penalty to the paths it processes telling other units to avoid choosing the same path.
 	 * 

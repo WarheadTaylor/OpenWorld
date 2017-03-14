@@ -2,7 +2,6 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
-using System.Diagnostics;
 
 [AddComponentMenu ("Pathfinding/Seeker")]
 /** Handles path calls for a single unit.

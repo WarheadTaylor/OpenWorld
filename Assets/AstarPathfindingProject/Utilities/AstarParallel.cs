@@ -1,9 +1,8 @@
-using UnityEngine;
-using System.Collections;
 using System.Threading;
 
-namespace Pathfinding.Threading {
-	public class Parallel {
+namespace Pathfinding.Threading
+{
+    public class Parallel {
 		
 		Parallel Instance;
 		

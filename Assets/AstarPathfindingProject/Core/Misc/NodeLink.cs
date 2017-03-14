@@ -1,12 +1,11 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
-namespace Pathfinding {
-	[AddComponentMenu("Pathfinding/Link")]
+namespace Pathfinding
+{
+    [AddComponentMenu("Pathfinding/Link")]
 	public class NodeLink : GraphModifier {
 		
 		/** End position of the link */

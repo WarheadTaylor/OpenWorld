@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 using Pathfinding;
 
 /** Small sample script for placing obstacles */

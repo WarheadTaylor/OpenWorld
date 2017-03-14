@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding.RVO;
 
-namespace Pathfinding {
-	public class TargetMover : MonoBehaviour {
+namespace Pathfinding
+{
+    public class TargetMover : MonoBehaviour {
 		
 		/** Mask for the raycast placement */
 		public LayerMask mask;

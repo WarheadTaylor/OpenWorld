@@ -1,5 +1,4 @@
-﻿using UnityEngine; 
-using System.Collections; 
+﻿using UnityEngine;
 
 public class HiResScreenshots : MonoBehaviour { 
 	public int resWidth = 4096; 

@@ -1,13 +1,11 @@
 //@AstarDev
 using UnityEngine;
 using System.Collections;
-using Pathfinding;
-using Pathfinding.Nodes;
 using System.Collections.Generic;
-using Pathfinding.Serialization;
 
-namespace Pathfinding {
-	public class QuadtreeGraph : NavGraph {
+namespace Pathfinding
+{
+    public class QuadtreeGraph : NavGraph {
 		
 		public int editorWidthLog2 = 6;
 		public int editorHeightLog2 = 6;

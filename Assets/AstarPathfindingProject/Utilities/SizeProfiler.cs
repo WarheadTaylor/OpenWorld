@@ -1,14 +1,13 @@
 //#define ASTAR_SizeProfile    //"Size Profile Debug" If enabled, size profiles will be logged when serializing a graph
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
-using Pathfinding;
 
-namespace Pathfinding {
-	/** Simple profiler for what is written to a BinaryWriter stream */
-	public class SizeProfiler {
+namespace Pathfinding
+{
+    /** Simple profiler for what is written to a BinaryWriter stream */
+    public class SizeProfiler {
 		
 		public struct ProfileSizePoint {
 			public long lastBegin;

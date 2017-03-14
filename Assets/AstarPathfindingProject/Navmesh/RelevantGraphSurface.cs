@@ -1,16 +1,15 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	/** Pruning of recast navmesh regions.
+namespace Pathfinding
+{
+    /** Pruning of recast navmesh regions.
 	 * A RelevantGraphSurface component placed in the scene specifies that
 	 * the navmesh region it is inside should be included in the navmesh.
 	 * 
 	 * \see Pathfinding.RecastGraph.relevantGraphSurfaceMode
 	 * 
 	 */
-	[AddComponentMenu("Pathfinding/Navmesh/RelevantGraphSurface")]
+    [AddComponentMenu("Pathfinding/Navmesh/RelevantGraphSurface")]
 	public class RelevantGraphSurface : MonoBehaviour {
 		
 		private static RelevantGraphSurface root;

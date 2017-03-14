@@ -1,14 +1,13 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	
-	/** Defines a shape for a Pathfinding.GraphUpdateObject.
+namespace Pathfinding
+{
+
+    /** Defines a shape for a Pathfinding.GraphUpdateObject.
 	 * The shape consists of a number of points which it can either calculate the convex hull of (XZ space) or use as a polygon directly.
 	 * \see Pathfinding.GraphUpdateObject.shape
 	 */
-	public class GraphUpdateShape  {
+    public class GraphUpdateShape  {
 	
 		Vector3[] _points;
 		Vector3[] _convexPoints;

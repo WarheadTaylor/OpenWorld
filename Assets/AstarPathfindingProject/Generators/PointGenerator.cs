@@ -1,12 +1,12 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Serialization.JsonFx;
 using Pathfinding.Serialization;
 
-namespace Pathfinding {
-	
-	/** Basic point graph.
+namespace Pathfinding
+{
+
+    /** Basic point graph.
 	 * \ingroup graphs
 	  * The List graph is the most basic graph structure, it consists of a number of interconnected points in space, waypoints or nodes.\n
 	  * The list graph takes a Transform object as "root", this Transform will be searched for child objects, every child object will be treated as a node.
@@ -24,7 +24,7 @@ namespace Pathfinding {
 \shadowimage{pointgraph_inspector.png}
 
 	  */
-	[JsonOptIn]
+    [JsonOptIn]
 	public class PointGraph : NavGraph
 	{
 		

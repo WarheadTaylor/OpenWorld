@@ -1,17 +1,14 @@
 //#define ASTARDEBUG
-using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Pathfinding;
 
-namespace Pathfinding {
-//Binary Heap
-	
-	
-	/** Binary heap implementation. Binary heaps are really fast for ordering nodes in a way that makes it possible to get the node with the lowest F score. Also known as a priority queue.
+namespace Pathfinding
+{
+    //Binary Heap
+
+
+    /** Binary heap implementation. Binary heaps are really fast for ordering nodes in a way that makes it possible to get the node with the lowest F score. Also known as a priority queue.
 	 * \see http://en.wikipedia.org/wiki/Binary_heap
 	 */
-	public class BinaryHeapM { 
+    public class BinaryHeapM { 
 		private PathNode[] binaryHeap; 
 		public int numberOfItems; 
 		

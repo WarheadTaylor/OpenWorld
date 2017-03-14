@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[AddComponentMenu("Pathfinding/GraphUpdateScene")]
+namespace Pathfinding
+{
+    [AddComponentMenu("Pathfinding/GraphUpdateScene")]
 	/** Helper class for easily updating graphs.
 	 * 
 	 * \see \ref graph-updates

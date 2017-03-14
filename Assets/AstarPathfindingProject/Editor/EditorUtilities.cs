@@ -1,10 +1,9 @@
-using UnityEngine;
-using System.Collections;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Pathfinding {
-	public class EditorUtilities {
+namespace Pathfinding
+{
+    public class EditorUtilities {
 	
 		public static string GetMd5Hash(MD5 md5Hash, string input)
 		{

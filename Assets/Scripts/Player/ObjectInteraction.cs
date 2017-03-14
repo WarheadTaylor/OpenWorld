@@ -1,5 +1,4 @@
 using UnityEngine;
-using System.Collections;
 
 public sealed class ObjectInteraction : MonoBehaviour {
 	public GameObject ItemInHand;

@@ -1,13 +1,11 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pathfinding;
 #if UNITY_EDITOR
-using UnityEditor;
 #endif
 
-namespace Pathfinding {
-	[AddComponentMenu("Pathfinding/Link2")]
+namespace Pathfinding
+{
+    [AddComponentMenu("Pathfinding/Link2")]
 	public class NodeLink2 : GraphModifier {
 		
 		protected static Dictionary<GraphNode,NodeLink2> reference = new Dictionary<GraphNode,NodeLink2>();

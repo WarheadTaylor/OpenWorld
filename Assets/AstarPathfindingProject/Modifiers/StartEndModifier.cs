@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[System.Serializable]
+namespace Pathfinding
+{
+    [System.Serializable]
 	/** Adjusts start and end points of a path.
 	 * \ingroup modifiers
 	 */

@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[ExecuteInEditMode]
+namespace Pathfinding
+{
+    [ExecuteInEditMode]
 	/** Helper class to keep track of references to GameObjects.
 	 * Does nothing more than to hold a GUID value.
 	 */

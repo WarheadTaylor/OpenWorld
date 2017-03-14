@@ -1,16 +1,15 @@
 
 using UnityEngine;
-using System.Collections;
-using Pathfinding;
 using System;
 using System.Collections.Generic;
 
-namespace Pathfinding {
-	
-	/** Contains various spline functions.
+namespace Pathfinding
+{
+
+    /** Contains various spline functions.
 	 * \ingroup utils
 	 */
-	class AstarSplines {
+    class AstarSplines {
 		public static Vector3 CatmullRom(Vector3 previous,Vector3 start, Vector3 end, Vector3 next, float elapsedTime) {
 			// References used:
 			// p.266 GemsV1

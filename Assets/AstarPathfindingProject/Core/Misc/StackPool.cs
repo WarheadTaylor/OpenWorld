@@ -1,11 +1,10 @@
 //#define ASTAR_NO_POOLING //Disable pooling for some reason. Could be debugging or just for measuring the difference.
 
-using System;
 using System.Collections.Generic;
 
 namespace Pathfinding.Util
 {
-	/** Lightweight Stack Pool.
+    /** Lightweight Stack Pool.
 	 * Handy class for pooling stacks of type T.
 	 * 
 	 * Usage:
@@ -21,7 +20,7 @@ namespace Pathfinding.Util
 	 * \since Version 3.2
 	 * \see Pathfinding.Util.ListPool
 	 */
-	public static class StackPool<T>
+    public static class StackPool<T>
 	{
 		/** Internal pool */
 		static List<Stack<T>> pool;

@@ -1,16 +1,16 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using Pathfinding;
 using Pathfinding.Util;
 using Pathfinding.Serialization.JsonFx;
 
-namespace Pathfinding.RVO {}
+namespace Pathfinding.RVO { }
 
-namespace Pathfinding {
-	
-	/** A class for holding a user placed connection */
-	public class UserConnection {
+namespace Pathfinding
+{
+
+    /** A class for holding a user placed connection */
+    public class UserConnection {
 		
 		public Vector3 p1;
 		public Vector3 p2;

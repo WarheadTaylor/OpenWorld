@@ -1,13 +1,12 @@
 #pragma warning disable 0162
 #pragma warning disable 0414
 #define PROFILE
-using System;
 
 namespace Pathfinding
 {
-	
-	
-	class Profile {
+
+
+    class Profile {
 		const bool PROFILE_MEM = false;
 		
 		public string name;

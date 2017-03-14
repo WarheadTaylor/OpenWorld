@@ -1,13 +1,12 @@
 //#define ASTAR_NoTagPenalty
 #define ASTAR_GRID_CUSTOM_CONNECTIONS //Disabling this will reduce memory usage and improve performance slightly but you will not be able to add custom connections to grid nodes using e.g the NodeLink component.
-using System;
-using Pathfinding;
 using System.Collections.Generic;
 using Pathfinding.Serialization;
 using UnityEngine;
 
-namespace Pathfinding {
-	public class GridNode : GraphNode
+namespace Pathfinding
+{
+    public class GridNode : GraphNode
 	{
 		
 		public GridNode (AstarPath astar) : base (astar) {

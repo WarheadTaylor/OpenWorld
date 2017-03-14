@@ -8,11 +8,10 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[CustomGraphEditor (typeof(PointGraph),"PointGraph")]
+namespace Pathfinding
+{
+    [CustomGraphEditor (typeof(PointGraph),"PointGraph")]
 	public class PointGraphEditor : GraphEditor {
 	
 		public override void OnInspectorGUI (NavGraph target) {

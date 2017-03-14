@@ -1,19 +1,19 @@
 #if UNITY_4_2 || UNITY_4_1 || UNITY_4_0 || UNITY_3_5 || UNITY_3_4 || UNITY_3_3
-	#define UNITY_LE_4_3
+#define UNITY_LE_4_3
 #endif
 
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Util;
 using Pathfinding.Serialization.JsonFx;
 using Pathfinding.Serialization;
 
-namespace Pathfinding {
-	/// <summary>
-	/// Base class for all graphs
-	/// </summary>
-	public abstract class NavGraph {
+namespace Pathfinding
+{
+    /// <summary>
+    /// Base class for all graphs
+    /// </summary>
+    public abstract class NavGraph {
 		
 		/** Used to store the guid value
 		 * \see NavGraph.guid

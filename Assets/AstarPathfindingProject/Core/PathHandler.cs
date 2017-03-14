@@ -1,16 +1,15 @@
-using Pathfinding;
 using System.Collections.Generic;
 
 namespace Pathfinding
 {
-	/** Stores temporary node data for a single pathfinding request.
+    /** Stores temporary node data for a single pathfinding request.
 	 * Every node has one PathNode per thread used.
 	 * It stores e.g G score, H score and other temporary variables needed
 	 * for path calculation, but which are not part of the graph structure.
 	 * 
 	 * \see Pathfinding.PathHandler
 	 */
-	public class PathNode {
+    public class PathNode {
 		/** Reference to the actual graph node */
 		public GraphNode node;
 		

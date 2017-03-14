@@ -1,8 +1,5 @@
 //#define ASTARDEBUG		//"NavmeshController debug" Enables debugging lines
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Pathfinding;
 
 /** CharacterController helper for use on navmeshes.
  * This character controller helper will clamp the desired movement to the navmesh before moving.\n

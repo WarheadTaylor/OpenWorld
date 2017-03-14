@@ -1,9 +1,8 @@
 using UnityEngine;
-using System.Collections;
-using Pathfinding.RVO;
 
-namespace Pathfinding {
-	/** AI controller specifically made for the spider robot.
+namespace Pathfinding
+{
+    /** AI controller specifically made for the spider robot.
 	 * The spider robot (or mine-bot) which is got from the Unity Example Project
 	 * can have this script attached to be able to pathfind around with animations working properly.\n
 	 * This script should be attached to a parent GameObject however since the original bot has Z+ as up.
@@ -19,7 +18,7 @@ namespace Pathfinding {
 	 * 
 	 * \note This script assumes Y is up and that character movement is mostly on the XZ plane.
 	 */
-	[RequireComponent(typeof(Seeker))]
+    [RequireComponent(typeof(Seeker))]
 	public class MineBotAI : AIPath {
 		
 		/** Animation component.

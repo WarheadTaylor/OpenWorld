@@ -2,14 +2,13 @@
 //#define ASTARDEBUG
 #define ASTAR_GRID_CUSTOM_CONNECTIONS	
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pathfinding.Nodes;
 using Pathfinding.Serialization.JsonFx;
 using Pathfinding.Serialization;
 
-namespace Pathfinding {
-	[JsonOptIn]
+namespace Pathfinding
+{
+    [JsonOptIn]
 	/** Generates a grid of nodes.
 The GridGraph does exactly what the name implies, generates nodes in a grid pattern.\n
 Grid graphs suit well to when you already have a grid based world.

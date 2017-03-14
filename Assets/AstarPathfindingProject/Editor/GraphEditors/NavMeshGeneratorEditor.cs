@@ -4,11 +4,10 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using Pathfinding;
 
-namespace Pathfinding {
-	[CustomGraphEditor (typeof(NavMeshGraph),"NavMeshGraph")]
+namespace Pathfinding
+{
+    [CustomGraphEditor (typeof(NavMeshGraph),"NavMeshGraph")]
 	public class NavMeshGraphEditor : GraphEditor {
 		
 		//public GameObject meshRenderer;

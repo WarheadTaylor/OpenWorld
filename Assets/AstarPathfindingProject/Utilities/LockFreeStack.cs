@@ -1,9 +1,8 @@
-using UnityEngine;
-using System.Collections;
 using System.Threading;
 
-namespace Pathfinding.Util {
-	/** Implements a lock free multiple producer - single consumer stack for the Path object.
+namespace Pathfinding.Util
+{
+    /** Implements a lock free multiple producer - single consumer stack for the Path object.
 	  * Though it probably works for multiple producer - multiple consumer as well.
 	  * 
 	  * On iOS it degrades to using locking since Interlocked.CompareExchange is not available
@@ -11,7 +10,7 @@ namespace Pathfinding.Util {
 	  * 
 	  * \todo Add SINGLE_THREAD_OPTIMIZE define
 	  */
-	public class LockFreeStack {
+    public class LockFreeStack {
 		
 		public Path head;
 		

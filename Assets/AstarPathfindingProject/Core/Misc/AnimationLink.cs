@@ -1,10 +1,9 @@
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pathfinding;
 
-namespace Pathfinding {
-	public class AnimationLink : NodeLink2 {
+namespace Pathfinding
+{
+    public class AnimationLink : NodeLink2 {
 		
 		public string clip;
 		public float animSpeed = 1;

@@ -1,19 +1,17 @@
 //#define ASTARDEBUG
 //#define ASTAR_FAST_NO_EXCEPTIONS
 using System;
-using Pathfinding;
 using Pathfinding.Serialization.JsonFx;
 using Pathfinding.Ionic.Zip;
 using System.IO;
 using UnityEngine;
-using System.Collections.Generic;
 using Pathfinding.Util;
 
 namespace Pathfinding.Serialization
 {
-	
-	/** Holds information passed to custom graph serializers */
-	public class GraphSerializationContext {
+
+    /** Holds information passed to custom graph serializers */
+    public class GraphSerializationContext {
 		
 		private readonly GraphNode[] id2NodeMapping;
 		

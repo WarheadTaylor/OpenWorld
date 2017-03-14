@@ -2,12 +2,12 @@
 
 using UnityEngine;
 using System.Collections;
-using Pathfinding;
 using System.Collections.Generic;
 
-namespace Pathfinding {
-	/** Base class for all path types */
-	public abstract class Path {
+namespace Pathfinding
+{
+    /** Base class for all path types */
+    public abstract class Path {
 	
 		
 		/** Data for the thread calculating this path */

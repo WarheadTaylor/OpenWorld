@@ -8,7 +8,6 @@
 
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
 using Pathfinding;
 
 [CustomEditor(typeof(SimpleSmoothModifier))]

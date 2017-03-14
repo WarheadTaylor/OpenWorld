@@ -1,11 +1,10 @@
-using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
 using Pathfinding.Util;
 
-namespace Pathfinding {
-	
-	/** Contains useful functions for updating graphs.
+namespace Pathfinding
+{
+
+    /** Contains useful functions for updating graphs.
 	  * This class works a lot with the Node class, a useful function to get nodes is AstarPath.GetNearest.
 	  * 
 	  * \see AstarPath.GetNearest
@@ -15,7 +14,7 @@ namespace Pathfinding {
 	  * 
 	  * \ingroup utils
 	  */
-	public static class GraphUpdateUtilities {
+    public static class GraphUpdateUtilities {
 		
 		/** Returns if there is a walkable path from \a n1 to \a n2.
 		 * If you are making changes to the graph, areas must first be recaculated using FloodFill()

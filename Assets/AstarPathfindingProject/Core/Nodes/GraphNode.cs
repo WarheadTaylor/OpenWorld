@@ -1,19 +1,18 @@
 #define ASTAR_MORE_AREAS // Increases the number of areas to 65535 but reduces the maximum number of graphs to 4. Disabling gives a max number of areas of 1023 and 32 graphs.
 //#define ASTAR_NO_PENALTY // Enabling this disables the use of penalties. Reduces memory usage.
 using UnityEngine;
-using System.Collections;
 using System.Collections.Generic;
-using Pathfinding;
-using Pathfinding.Nodes;
 using Pathfinding.Serialization;
 
-namespace Pathfinding.Nodes {
-	//class A{}
+namespace Pathfinding.Nodes
+{
+    //class A{}
 }
 
-namespace Pathfinding {
-	
-	public delegate void GraphNodeDelegate (GraphNode node);
+namespace Pathfinding
+{
+
+    public delegate void GraphNodeDelegate (GraphNode node);
 	public delegate bool GraphNodeDelegateCancelable (GraphNode node);
 	
 	[System.Obsolete("This class has been replaced with GraphNode, it may be removed in future versions",true)]

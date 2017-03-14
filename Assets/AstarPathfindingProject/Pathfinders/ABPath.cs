@@ -4,20 +4,18 @@
 //#define ASTARDEBUG
 
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
-using Pathfinding;
 
-namespace Pathfinding {
-//Mem - 4+1+4+1+[4]+[4]+1+1+4+4+4+4+4+  12+12+12+12+12+12+4+4+4+4+4+1+1+(4)+4+4+4+4+4+4+4 ? 166 bytes
-	
-	/** Basic path, finds the shortest path from A to B.
+namespace Pathfinding
+{
+    //Mem - 4+1+4+1+[4]+[4]+1+1+4+4+4+4+4+  12+12+12+12+12+12+4+4+4+4+4+1+1+(4)+4+4+4+4+4+4+4 ? 166 bytes
+
+    /** Basic path, finds the shortest path from A to B.
 	 * \ingroup paths
 	 * This is the most basic path object it will try to find the shortest path from A to B.\n
 	 * Many other path types inherit from this type.
 	 * \see Seeker.StartPath
 	 */
-	public class ABPath : Path {
+    public class ABPath : Path {
 		
 		/** Defines if start and end nodes will have their connection costs recalculated for this path.
 		 * These connection costs will be more accurate and based on the exact start point and target point,
