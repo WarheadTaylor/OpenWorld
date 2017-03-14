@@ -1,6 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-public class Tree : InteractableObject {
+﻿public class Tree : InteractableObject {
 
 }

@@ -24,7 +24,7 @@ public sealed class HUD : MonoBehaviour {
 
 	void OnGUI () {
 		GUI.Label(new Rect(10, 10, 150, 100), "Current FPS: " + ((int)FPS).ToString());
-		GUI.Label(new Rect(10, 50, 150, 100), "Current Health: " + Player.GetComponent<PlayerStats>().Health);
+		// GUI.Label(new Rect(10, 50, 150, 100), "Current Health: " + Player.GetComponent<PlayerStats>().Health);
 		GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 0, 0), "This is a crosshair");
 	}
 }
