@@ -74,7 +74,7 @@ public sealed class ObjectInteraction : MonoBehaviour {
 		if (Physics.Raycast(FirstPersonCamera.position, FirstPersonCamera.forward, out hit, 2)) {
 			GameObject item = hit.transform.gameObject;
 			if (LocalInventory.Insert(item.name)) {
-				DestroyObject(item);
+				Destroy(item);
 			}
 		}
 	}
