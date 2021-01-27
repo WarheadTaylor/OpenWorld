@@ -4,4 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/PyroTestScene.unity
+    guid: c12bfddb9957a014ea97287b836f86a2
+  m_configObjects: {}
